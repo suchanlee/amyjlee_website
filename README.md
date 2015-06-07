@@ -1,2 +1,2 @@
-# amyjlee_website
-Amy's portfolio
+# Amy's Portfolio
+:D
