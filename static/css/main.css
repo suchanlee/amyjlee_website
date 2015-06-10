@@ -96,10 +96,9 @@ textarea {
    ========================================================================== */
 
 body {
-    max-width: 804px;
+    max-width: 900px;
     margin: 0 auto;
     font-family: "proxima-nova";
-    color: 6px solid #323232;
 }
 
 nav {
@@ -193,6 +192,7 @@ nav .nav-list li {
 }
 
 .project-item-frame {
+    cursor: pointer;
     position: absolute;
     width: 100%;
     top: 0;
@@ -207,10 +207,66 @@ nav .nav-list li {
 }
 
 .project-item-frame:hover {
-    -webkit-transform: translateY(-50px);
-    -moz-transform: translateY(-50px);
-    -ms-transform: translateY(-50px);
-    transform: translateY(-50px);
+    -webkit-transform: translateY(-90px);
+    -moz-transform: translateY(-90px);
+    -ms-transform: translateY(-90px);
+    transform: translateY(-90px);
+}
+
+.project-detail {
+    margin-bottom: 130px;
+}
+
+.project-detail-header {
+    display: inline-block;
+    width: 40%;
+    vertical-align: bottom;
+}
+
+.project-main-image {
+    width: 59%;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+.project-image {
+    width: 100%;
+}
+
+.project-header-padder {
+    padding: 10px 25px;
+}
+
+.project-heading {
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+.project-metadata {
+    margin-top: 0px;
+    font-size: 15px;
+}
+
+.project-metadata-type {
+    padding-right: 3px;
+}
+
+.project-metadata-medium {
+    padding: 0px 3px;
+}
+
+.project-metadata-year {
+    padding-left: 3px;
+}
+
+.project-detail-summary {
+    font-size: 14px;
+}
+
+.project-image {
+    margin-top: 20px;
 }
 
 footer {

@@ -9,29 +9,37 @@
   // List of projects
   var projects = [
     {
-      title: 'Caltrain Me Redesign',
+      title: 'CaltrainMe',
       thumbnail: '/static/img/projects/caltrainme/caltrainme_main.jpg',
-      tagline: 'Re-design of the popular Caltrain app',
-      summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
+      main_image: '/static/img/projects/caltrainme/caltrainme_1.jpg',
+      project_type: 'Conceptual Redesign',
+      medium: 'Mobile App',
+      year: '2014',
+      summary: 'One of the first apps I downloaded after moving to the bay area was Caltrain Me. Many commuters are heavily dependent on the Caltrain rail system and newcomers like me would probably find a great use of an app like this. Yet, commuting is not as fun as we commuters all hope to be.  Opening this app every morning, I wished this could be more fun. I started with the logo and moved on to updating the layout and flow. This is a conceptual redesign project and has no affiliation with the creators of Caltrain Me.',
       images: [
-        'http://placehold.it/500x400',
-        'http://placehold.it/500x400'
+        '/static/img/projects/caltrainme/caltrainme_2.jpg',
       ]
     },
     {
       title: 'Gas Buddy Redesign',
       thumbnail: '/static/img/projects/gasbuddy/gasbuddy_main.jpg',
-      tagline: 'Revamping your travel buddy',
+      main_image: '/static/img/projects/gasbuddy/gasbuddy_1.jpg',
+      project_type: 'Conceptual Redesign',
+      medium: 'Mobile App',
+      year: '2014',
       summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
       images: [
-        'http://placehold.it/500x400',
-        'http://placehold.it/500x400'
+        '/static/img/projects/gasbuddy/gasbuddy_2.jpg',
+        '/static/img/projects/gasbuddy/gasbuddy_3.png',
       ]
     },
     {
       title: 'Bezzist',
       thumbnail: '/static/img/projects/bezzist/bezzist_main.jpg',
-      tagline: 'Revamping your travel buddy',
+      main_image: '/static/img/projects/gasbuddy/gasbuddy_1.jpg',
+      project_type: 'Conceptual Redesign',
+      medium: 'Mobile App',
+      year: '2014',
       summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
       images: [
         'http://placehold.it/500x400',
@@ -41,7 +49,10 @@
     {
       title: 'Chrome Download Redesign',
       thumbnail: '/static/img/projects/chromedl/chromedl_main.jpg',
-      tagline: 'Revamping your travel buddy',
+      main_image: '/static/img/projects/gasbuddy/gasbuddy_1.jpg',
+      project_type: 'Conceptual Redesign',
+      medium: 'Mobile App',
+      year: '2014',
       summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
       images: [
         'http://placehold.it/500x400',
@@ -51,17 +62,22 @@
     {
       title: 'Icons',
       thumbnail: '/static/img/projects/icons/icons_main.jpg',
-      tagline: 'Revamping your travel buddy',
+      main_image: '/static/img/projects/gasbuddy/gasbuddy_1.jpg',
+      project_type: 'Conceptual Redesign',
+      medium: 'Mobile App',
+      year: '2014',
       summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
       images: [
-        'http://placehold.it/500x400',
-        'http://placehold.it/500x400'
+        '/static/img/projects/icons/beauty_iconset-01.png'
       ]
     },
     {
       title: 'Vincent',
       thumbnail: '/static/img/projects/vincent/vincent_main.jpg',
-      tagline: 'Revamping your travel buddy',
+      main_image: '/static/img/projects/gasbuddy/gasbuddy_1.jpg',
+      project_type: 'Conceptual Redesign',
+      medium: 'Mobile App',
+      year: '2014',
       summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
       images: [
         'http://placehold.it/500x400',
@@ -92,7 +108,7 @@
     '<li data-id="<%= id %>" class="project-item">' +
     '  <div class="project-item-frame">' +
     '    <img class="project-thumbnail" src="<%= thumbnail %>" alt="<%= title %> Thumbnail">' +
-    '    <h3 class="project-title"><%= title %></h3>' +
+    '    <h3 class="project-item-title"><%= title %></h3>' +
     '  </div>' +
     '</li>'
   );
@@ -114,30 +130,25 @@
     $projectList.append(projectItems[i]);
   }
 
-  // bind clicks to profile toggling
-  var toggleProfile = function(evt) {
-    if ($logo.hasClass('logo-clicked')) {
-      if (!(evt.target.className === 'header')) {
-        $logo.removeClass('logo-clicked');
-      }
-    } else {
-      $logo.addClass('logo-clicked');
-    }
-  };
-
-  $logo.click(toggleProfile);
-
   // Define project item detail view template
   var projectDetailTemplate = _.template(
     '<div class="project-detail">' +
+    '    <img class="project-main-image" src="<%= main_image %>" alt="<%= title %> main image">' +
     '    <div class="project-detail-header">' +
-    '        <h2 class="project-item-heading"><%= title %></h2>' +
-    '        <p class="porfolio-item-tagline"><%= tagline %></p>' +
+    '      <div class="project-header-padder"> ' +
+    '      <h2 class="project-heading"><%= title %></h2>' +
+    '      <p class="project-metadata">' +
+    '        <span class="project-metadata-type"><%= project_type %></span> | ' +
+    '        <span class="project-metadata-medium"><%= medium %></span> | ' +
+    '        <span class="project-metadata-year"><%= year %></span>' +
+    '      </p>' +
+    '      <div class="project-detail-summary"><%= summary %></div>' +
     '    </div>' +
-    '    <div class="project-detail-summary"><%= summary %></div>' +
+    '    </div> ' +
+    '    <div class="clear-float"></div' +
     '    <div class="project-detail-images">' +
     '    <% _.each(images, function(image) { %>' +
-    '      <img src="<%= image %>" alt="project image">' +
+    '      <img src="<%= image %>" alt="project image" class="project-image">' +
     '    <% }); %>' +
     '    </div>' +
     '</div>'
@@ -149,8 +160,19 @@
     router.setRoute('/projects/' + id + '/' + slugify(projects[id].title));
   };
 
+  // view binders
+
+  // home
+  $logo.click(function(evt) {
+    router.setRoute('/');
+    $projectDetail.addClass('hidden');
+    evt.preventDefault();
+    evt.stopPropagation();
+  });
+
   $projectList.on('click', '.project-thumbnail', handleDetailViewClick);
   $projectList.on('click', '.project-item-heading', handleDetailViewClick);
+  $projectList.on('click', '.project-item-title', handleDetailViewClick);
 
   // views
   var landingView = function() {
@@ -164,6 +186,7 @@
   var detailView = function(projectId) {
     var project = projects[projectId];
     $projectDetail.html(projectDetailTemplate(project));
+    $projectDetail.removeClass('hidden');
     $('.project-item').css('opacity', 1);
     $body.animate({ scrollTop: 0 });
   };
