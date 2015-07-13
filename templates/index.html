@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/static/css/normalize.css">
     <link rel="stylesheet" href="/static/css/main.css">
     <script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/static/js/vendor/handlebars.runtime.min.js"></script>
 
     <script src="//use.typekit.net/dcw5int.js"></script>
     <script>try{Typekit.load();}catch(e){}</script>
@@ -23,27 +24,34 @@
     <!-- Add your site or application content here -->
 
     <nav>
-      <span class="logo"><a href="#">AMY J LEE</a></span>
       <ul class="nav-list">
-        <li><a data-hover="ABOUT" href="/about">ABOUT</a></li>
-        <li><a data-hover="CONTACT" href="#contact">CONTACT</a></li>
+        <li class="logo"><a href="#">AMY J LEE</a></span></li>
+        <li class="nav-list-item"><a data-hover="ABOUT" href="/about">ABOUT</a></li>
+        <li class="nav-list-item"><a data-hover="CONTACT" href="/contact">CONTACT</a></li>
       </ul>
       <div class="clear-float"></div>
     </nav>
 
     <section>
-      <div class="project-detail hidden"></div>
+      <div class="project-detail"></div>
     </section>
 
     <section>
-      <div class="about"></div>
+      <div class="about">
+        <h1>ABOUT AMY J LEE</h1>
+        <p>Amy is a Lorem ipsum Quis anim sit Duis do ad culpa voluptate laboris esse ut adipisicing incididunt ad aliquip proident officia eu elit in mollit esse exercitation occaecat exercitation fugiat occaecat in sit anim in velit in quis est ut in ea culpa.</p>
+      </div>
     </section>
 
     <section>
-      <div class="contact"></div>
+      <div class="contact">
+        <h1>CONTACT</h1>
+        <p>Contact me at <a href="mailto:me.lee@gmail.com">me.lee [@] gmail.com</a></p>
+      </div>
     </section>
 
     <section>
+      <p class="projects-heading">PROJECTS</p>
       <ul class="project-list"></ul>
       <div class="clear-float"></div>
     </section>
@@ -57,6 +65,8 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/Director/1.2.8/director.min.js"></script>
+    <script src="/static/js/templates/projectItem.handlebars.js"></script>
+    <script src="/static/js/templates/projectDetail.handlebars.js"></script>
     <script src="/static/js/plugins.js"></script>
     <script src="/static/js/main.js"></script>
   </body>
