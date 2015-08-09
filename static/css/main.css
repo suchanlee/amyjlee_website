@@ -264,6 +264,10 @@ nav .nav-list li.logo a {
     margin-bottom: 40px;
 }
 
+.image-width-30 {
+    width: 30%;
+}
+
 .image-width-40 {
     width: 40%;
 }
@@ -290,6 +294,11 @@ nav .nav-list li.logo a {
 
 .image-width-100 {
     width: 100%;
+}
+
+.image-side-by-side {
+    width: 47.5%;
+    margin-right: 2%;
 }
 
 .project-image-2:nth-of-type(1) {

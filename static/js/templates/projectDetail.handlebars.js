@@ -1,13 +1,18 @@
 (function() {
   var template = Handlebars.template, templates = Handlebars.templates = Handlebars.templates || {};
-templates['projectDetail'] = template({"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
-    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+templates['projectDetail'] = template({"1":function(depth0,helpers,partials,data) {
+    var helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
 
-  return "<img src=\""
-    + alias3(((helper = (helper = helpers.projectMainImage || (depth0 != null ? depth0.projectMainImage : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"projectMainImage","hash":{},"data":data}) : helper)))
+  return "  <img src=\""
+    + alias3(((helper = (helper = helpers.mainImage || (depth0 != null ? depth0.mainImage : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"mainImage","hash":{},"data":data}) : helper)))
     + "\" alt=\""
     + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
-    + " main image\" class=\"project-image image-width-60\">\n<div class=\"project-detail-header\">\n  <h1 class=\"project-heading\">"
+    + " main image\" class=\"project-image image-width-60\">\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.mainImage : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "<div class=\"project-detail-header\">\n  <h1 class=\"project-heading\">"
     + alias3(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper)))
     + "</h1>\n  <p class=\"project-metadata\">\n    <span class=\"project-metadata-type\">"
     + alias3(((helper = (helper = helpers.projectType || (depth0 != null ? depth0.projectType : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"projectType","hash":{},"data":data}) : helper)))
