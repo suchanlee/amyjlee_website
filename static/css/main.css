@@ -231,34 +231,73 @@ nav .nav-list li.logo a {
 }
 
 .project-detail {
-    margin-bottom: 130px;
+    margin-top: 40px;
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.project-detail h2 {
+    font-size: 20px;
+    margin-top: 45px;
+    font-weight: 600;
+}
+
+.project-detail iframe {
+    display: block;
+    margin: 0 auto;
 }
 
 .project-detail-header {
-    display: inline-block;
     width: 100%;
-    max-width: 480px;
-    vertical-align: bottom;
-}
-
-.project-detail-images {
     text-align: center;
-}
-
-.project-detail-image-container {
-    margin-top: 20px;
-}
-
-.project-detail-image-container figure {
-    width: 100%;
-}
-
-.project-image, .project-image-caption {
-    max-width: 360px;
+    margin: 45px 0px 30px 0px;
 }
 
 .project-image {
-    vertical-align: bottom;
+    margin: 0 auto;
+    display: block;
+}
+
+.project-image-in-text {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.image-width-40 {
+    width: 40%;
+}
+
+.image-width-50 {
+    width: 50%;
+}
+
+.image-width-60 {
+    width: 60%;
+}
+
+.image-width-70 {
+    width: 70%;
+}
+
+.image-width-80 {
+    width: 80%;
+}
+
+.image-width-90 {
+    width: 90%;
+}
+
+.image-width-100 {
+    width: 100%;
+}
+
+.project-image-2:nth-of-type(1) {
+    margin-right: 0.4%;
+}
+
+.project-image-2:nth-of-type(2) {
+    margin-left: 0.4%;
 }
 
 .project-image-caption {
@@ -271,24 +310,16 @@ nav .nav-list li.logo a {
     text-align: left;
 }
 
-.project-iframe-container {
-    text-align: center;
-}
-
-.project-header-padder {
-    padding: 10px 25px;
-}
-
 .project-heading {
     font-weight: 600;
-    font-size: 25px;
+    font-size: 32px;
     margin-bottom: 0px;
     margin-top: 0px;
 }
 
 .project-metadata {
-    margin-top: 0px;
-    font-size: 15px;
+    margin-top: 10px;
+    font-size: 13px;
 }
 
 .project-metadata-type {
@@ -305,10 +336,6 @@ nav .nav-list li.logo a {
 
 .project-detail-summary {
     font-size: 14px;
-}
-
-.project-image {
-    margin-top: 20px;
 }
 
 footer {
