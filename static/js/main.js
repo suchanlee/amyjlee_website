@@ -96,6 +96,10 @@
       .replace(/-+$/, '');            // Trim - from end of text
   };
 
+  var getPath = function(id) {
+    return '/projects/' + id + '/' + slugify(projects[id].title);
+  };
+
   // Cache commonly used jquery objects
   var $body          = $('body');
   var $projectList   = $('.project-list');
@@ -119,7 +123,10 @@
   // bind clicks to load detail view
   var handleDetailViewClick = function(evt) {
     var id = parseInt($(evt.target).closest('li').attr('data-id'), 10);
-    router.setRoute('/projects/' + id + '/' + slugify(projects[id].title));
+    if (window.location.pathname !== getPath(id)) {
+      router.setRoute(getPath(id));
+    }
+    $body.animate({ scrollTop: 0 });
     evt.stopPropagation();
     evt.preventDefault();
   };
@@ -128,7 +135,9 @@
 
   // home
   $logo.click(function(evt) {
-    router.setRoute('/');
+    if (window.location.pathname !== '/') {
+      router.setRoute('/');
+    }
     evt.preventDefault();
     evt.stopPropagation();
   });
@@ -157,7 +166,6 @@
     var project = projects[projectId];
     $projectDetail.html(Handlebars.templates.projectDetail(project));
     $projectDetail.show();
-    $body.animate({ scrollTop: 0 });
   };
 
   var contactView = function() {
