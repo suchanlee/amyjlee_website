@@ -255,6 +255,7 @@ nav .nav-list li.logo a {
 }
 
 .project-image {
+    width: 100%;
     margin: 0 auto;
     display: block;
 }
@@ -265,48 +266,40 @@ nav .nav-list li.logo a {
 }
 
 .image-width-30 {
-    width: 30%;
+    max-width: 270px;
 }
 
 .image-width-40 {
-    width: 40%;
+    max-width: 360px;
 }
 
 .image-width-50 {
-    width: 50%;
+    max-width: 450px;
 }
 
 .image-width-60 {
-    width: 60%;
+    max-width: 540px;
 }
 
 .image-width-70 {
-    width: 70%;
+    max-width: 630px;
 }
 
 .image-width-80 {
-    width: 80%;
+    max-width: 720px;
 }
 
 .image-width-90 {
-    width: 90%;
+    max-width: 810px;
 }
 
 .image-width-100 {
-    width: 100%;
+    max-width: 900px;
 }
 
 .image-side-by-side {
-    width: 47.5%;
+    max-width: 427.5px;
     margin-right: 2%;
-}
-
-.project-image-2:nth-of-type(1) {
-    margin-right: 0.4%;
-}
-
-.project-image-2:nth-of-type(2) {
-    margin-left: 0.4%;
 }
 
 .project-image-caption {
