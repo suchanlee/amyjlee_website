@@ -37,19 +37,14 @@
       iframes: []
     },
     {
-      title: 'Yogo',
+      title: 'Yogo: Your Poll on the Go',
+      mainImage: '/static/img/projects/yogo/logo01.png',
       thumbnail: '/static/img/projects/yogo/thumbnail_yogo.png',
-      projectType: 'Conceptual Redesign',
-      medium: 'Mobile App',
-      year: '2014',
+      projectType: 'Product Design',
+      medium: 'Web App',
+      year: '2015',
       summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
-      images: [
-        {
-          urls: ['http://placehold.it/500x400'],
-          caption: ''
-        }
-      ],
-      iframes: []
+      projectDetail: Handlebars.templates.yogo()
     },
     {
       title: 'Gas Buddy Redesign',
