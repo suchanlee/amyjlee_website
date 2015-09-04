@@ -72,14 +72,7 @@
       projectType: 'Icons',
       medium: 'Illustration',
       year: '2015',
-      summary: 'Super cool set of icons from my latest Japan trip, coming soon!',
-      images: [
-        {
-          urls: ['/static/img/projects/japanalphabets/japanabc.png'],
-          caption: ''
-        }
-      ],
-      iframes: []
+      projectDetail: Handlebars.templates.japanIcons()
     }
   ];
 
