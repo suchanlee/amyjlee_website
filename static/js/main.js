@@ -148,12 +148,6 @@
     $projectDetail.show();
   };
 
-  var contactView = function() {
-    hideNonProjectListViews();
-    $contact.fadeIn();
-    $body.animate({ scrollTop: 0 });
-  };
-
   var aboutView = function() {
     hideNonProjectListViews();
     $about.show();
@@ -163,7 +157,6 @@
   var router = Router({
     '/': landingView,
     '/about': aboutView,
-    '/contact': contactView,
     '/projects/:projectId/:projectSlug': detailView
   });
   router.configure({ html5history: true });
