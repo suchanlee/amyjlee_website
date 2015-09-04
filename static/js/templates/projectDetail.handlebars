@@ -1,15 +1,17 @@
-{{#if mainImage}}
-  <img src="{{mainImage}}" alt="{{title}} main image" class="project-image image-width-60">
-{{/if}}
-<div class="project-detail-header">
-  <h1 class="project-heading">{{title}}</h1>
-  <p class="project-metadata">
-    <span class="project-metadata-type">{{projectType}}</span> |
-    <span class="project-metadata-medium">{{medium}}</span> |
-    <span class="project-metadata-year">{{year}}</span>
-  </p>
-</div>
-<div class="clear-float"></div>
-<div class="project-details">
-  {{{projectDetail}}}
+<div class="{{slug}}">
+  {{#if mainImage}}
+    <img src="{{mainImage}}" alt="{{title}} main image" class="project-main-image project-image image-width-60">
+  {{/if}}
+  <div class="project-detail-header">
+    <h1 class="project-heading">{{title}}</h1>
+    <p class="project-metadata">
+      <span class="project-metadata-type">{{projectType}}</span> |
+      <span class="project-metadata-medium">{{medium}}</span> |
+      <span class="project-metadata-year">{{year}}</span>
+    </p>
+  </div>
+  <div class="clear-float"></div>
+  <div class="project-details">
+    {{{projectDetail}}}
+  </div>
 </div>

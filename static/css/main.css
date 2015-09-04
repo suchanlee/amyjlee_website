@@ -262,6 +262,12 @@ nav .nav-list li.logo a {
     width: 100%;
     margin: 0 auto;
     display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.project-image-inline {
+    display: inline;
 }
 
 .project-image-left {
@@ -312,7 +318,6 @@ nav .nav-list li.logo a {
 }
 
 .project-image-caption {
-    margin-top: -20px;
     margin-bottom: 20px;
     font-size: 13px;
     color: #666;
@@ -347,6 +352,10 @@ nav .nav-list li.logo a {
     font-size: 14px;
 }
 
+.yogo .project-main-image {
+    max-width: 300px;
+}
+
 .yogo-detail {
     margin-top: 20px;
     margin-bottom: 35px;
@@ -366,6 +375,12 @@ nav .nav-list li.logo a {
 .yogo-detail-text h3 {
     margin-top: 0px;
     font-size: 16px;
+}
+
+.chrome-download .project-image-inline {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 8px;
 }
 
 footer {

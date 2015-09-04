@@ -6,6 +6,17 @@
 
 (function($, _, Router, Handlebars) {
 
+  // utility function
+  // https://gist.github.com/mathewbyrne/1280286
+  var slugify = function(text) {
+    return text.toString().toLowerCase()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+      .replace(/^-+/, '')             // Trim - from start of text
+      .replace(/-+$/, '');            // Trim - from end of text
+  };
+
   // List of projects
   var projects = [
     {
@@ -19,25 +30,17 @@
     },
     {
       title: 'Chrome Download Redesign',
+      slug: 'chrome-download',
       thumbnail: '/static/img/projects/chromedl/thumbnail-07.png',
+      mainImage: '/static/img/projects/chromedl/chrome.gif',
       projectType: 'Conceptual Redesign',
       medium: 'Browser',
       year: '2015',
-      summary: 'Lorem ipsum In in officia culpa et elit in dolore consequat deserunt elit dolor dolor culpa deserunt eu Ut mollit.',
-      images: [
-        {
-          urls: ['http://placehold.it/500x400'],
-          caption: ''
-        },
-        {
-          urls: ['http://placehold.it/500x400'],
-          caption: ''
-        }
-      ],
-      iframes: []
+      projectDetail: Handlebars.templates.chromedownload()
     },
     {
       title: 'Yogo: Your Poll on the Go',
+      slug: 'yogo',
       mainImage: '/static/img/projects/yogo/logo01.png',
       thumbnail: '/static/img/projects/yogo/thumbnail_yogo.png',
       projectType: 'Product Design',
@@ -79,17 +82,6 @@
       iframes: []
     }
   ];
-
-  // utility function
-  // https://gist.github.com/mathewbyrne/1280286
-  var slugify = function(text) {
-    return text.toString().toLowerCase()
-      .replace(/\s+/g, '-')           // Replace spaces with -
-      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-      .replace(/^-+/, '')             // Trim - from start of text
-      .replace(/-+$/, '');            // Trim - from end of text
-  };
 
   var getPath = function(id) {
     return '/projects/' + id + '/' + slugify(projects[id].title);
