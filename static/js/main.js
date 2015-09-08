@@ -20,6 +20,16 @@
   // List of projects
   var projects = [
     {
+      title         : 'Yogo: Your Poll on the Go',
+      slug          : 'yogo',
+      mainImage     : '/static/img/projects/yogo/logo01.png',
+      thumbnail     : '/static/img/projects/yogo/thumbnail_yogo.png',
+      projectType   : 'Product Design',
+      medium        : 'Web App',
+      year          : '2015',
+      projectDetail : Handlebars.templates.yogo()
+    },
+    {
       title         : 'Rethinking CaltrainMe',
       thumbnail     : '/static/img/projects/caltrainme/thumbnail_caltrain.png',
       mainImage     : '/static/img/projects/caltrainme/iphone-6-mockup.png',
@@ -39,14 +49,32 @@
       projectDetail : Handlebars.templates.chromedownload()
     },
     {
-      title         : 'Yogo: Your Poll on the Go',
-      slug          : 'yogo',
-      mainImage     : '/static/img/projects/yogo/logo01.png',
-      thumbnail     : '/static/img/projects/yogo/thumbnail_yogo.png',
-      projectType   : 'Product Design',
-      medium        : 'Web App',
+      title         : 'Japan Trip Icon Alphabet Book',
+      slug          : 'japan-trip-icons',
+      thumbnail     : '/static/img/projects/japanalphabets/thumbnail_abc.png',
+      projectType   : 'Icons',
+      medium        : 'Illustration',
       year          : '2015',
-      projectDetail : Handlebars.templates.yogo()
+      projectDetail : Handlebars.templates.japanIcons()
+    },
+    {
+      title         : 'The Exhibition',
+      slug          : 'the-exhibition',
+      thumbnail     : '/static/img/projects/theexhibition/thumbnail-09.png',
+      mainImage     : '/static/img/projects/theexhibition/logo.png',
+      projectType   : 'Product',
+      medium        : 'Web',
+      year          : '2014',
+      projectDetail : Handlebars.templates.theexhibition()
+    },
+    {
+      title         : 'Just Show Up',
+      slug          : 'just-show-up',
+      thumbnail     : '/static/img/projects/justshowup/thumbnail-08.png',
+      projectType   : 'Event Promotion',
+      medium        : 'Poster',
+      year          : '2015',
+      projectDetail : Handlebars.templates.justshowup()
     },
     {
       title         : 'Gas Buddy Redesign',
@@ -64,35 +92,7 @@
       medium        : 'Illustration',
       year          : '2015',
       projectDetail : Handlebars.templates.icons()
-    },
-    {
-      title         : 'Japan Trip Icon Alphabet Book',
-      slug          : 'japan-trip-icons',
-      thumbnail     : '/static/img/projects/japanalphabets/thumbnail_abc.png',
-      projectType   : 'Icons',
-      medium        : 'Illustration',
-      year          : '2015',
-      projectDetail : Handlebars.templates.japanIcons()
-    },
-    {
-      title         : 'Just Show Up',
-      slug          : 'just-show-up',
-      thumbnail     : '/static/img/projects/justshowup/thumbnail-08.png',
-      projectType   : 'Event Promotion',
-      medium        : 'Poster',
-      year          : '2015',
-      projectDetail : Handlebars.templates.justshowup()
-    },
-    {
-      title         : 'The Exhibition',
-      slug          : 'the-exhibition',
-      thumbnail     : '/static/img/projects/theexhibition/thumbnail-09.png',
-      projectType   : 'Product',
-      medium        : 'Web',
-      year          : '2014',
-      projectDetail : Handlebars.templates.japanIcons()
     }
-
   ];
 
   var getPath = function(id) {
@@ -172,7 +172,7 @@
     $projectList.show();
     $projectDetail.html('').hide();
     $('.project-item').css('opacity', 0).each(function(idx) {
-      $(this).delay((i++) * 80).fadeTo(250, 1);
+      $(this).delay((i++) * 50).fadeTo(250, 1);
     });
     $body.animate({ scrollTop: 0 });
     document.title = 'Amy J Lee';

@@ -407,6 +407,7 @@ nav .nav-list li.logo a {
 .about {
     text-align: center;
     margin: 25px 0;
+    display: none;
 }
 
 .about h1 {
@@ -432,6 +433,10 @@ footer {
 
 .clear-float {
     clear: both;
+}
+
+.centered-text {
+    text-align: center;
 }
 
 @media only screen and (min-width: 381px) and (max-width: 680px) {
