@@ -10,6 +10,9 @@
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="/static/css/normalize.css">
     <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="apple-touch-icon-precomposed" href="/static/img/favicon.ico">
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+
     <script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="/static/js/vendor/handlebars.runtime.min.js"></script>
 
@@ -18,16 +21,11 @@
   </head>
   <body>
 
-    <!--[if lt IE 8]>
-        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-    <!-- Add your site or application content here -->
-
     <nav>
       <ul class="nav-list">
         <li class="logo"><a href="#">AMY J LEE</a></span></li>
-        <li class="nav-list-item"><a data-hover="ABOUT" href="/about">ABOUT</a></li>
-        <li class="nav-list-item"><a data-hover="PROJECTS" href="/">PROJECTS</a></li>
+        <li class="nav-list-item about-link"><a data-hover="ABOUT" href="/about">ABOUT</a></li>
+        <li class="nav-list-item projects-link"><a data-hover="PROJECTS" href="/">PROJECTS</a></li>
       </ul>
       <div class="clear-float"></div>
     </nav>
@@ -36,22 +34,17 @@
       <div class="project-detail"></div>
     </section>
 
-<!--    <section>
+    <section>
       <div class="about">
-        <h1>ABOUT AMY J LEE</h1>
-        <p>Amy is a Lorem ipsum Quis anim sit Duis do ad culpa voluptate laboris esse ut adipisicing incididunt ad aliquip proident officia eu elit in mollit esse exercitation occaecat exercitation fugiat occaecat in sit anim in velit in quis est ut in ea culpa.</p>
+        <img src="/static/img/about/about_image.png" alt="about page image">
+        <h1>Hi, there!</h1>
+        <p>I'm Amy and I like designing beautiful things.</p>
+        <p>Timeless products, heartwarming illustrations, and ingenious icons inspire me.</p>
+        <p>I'm currently looking for new opportunities! <br>You can reach me via <a href="mailto:jl2469@cornell.edu">email</a> <br>[ jl2469 at cornell.edu ]</p>
       </div>
     </section>
 
     <section>
-      <div class="contact">
-        <h1>CONTACT</h1>
-        <p>Contact me at <a href="mailto:me.lee@gmail.com">me.lee [@] gmail.com</a></p>
-      </div>
-    </section>-->
-
-    <section>
-      <p class="projects-heading">PROJECTS</p>
       <ul class="project-list"></ul>
       <div class="clear-float"></div>
     </section>
@@ -59,8 +52,6 @@
     <footer>
       <p>&copy; 2015 Amy J Lee</p>
     </footer>
-
-    <!-- End your site or application content -->
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"></script>
@@ -73,6 +64,7 @@
     <script src="/static/js/templates/projects/yogo.handlebars.js"></script>
     <script src="/static/js/templates/projects/chromedownload.handlebars.js"></script>
     <script src="/static/js/templates/projects/japanIcons.handlebars.js"></script>
+    <script src="/static/js/templates/projects/justshowup.handlebars.js"></script>
     <script src="/static/js/plugins.js"></script>
     <script src="/static/js/main.js"></script>
   </body>
