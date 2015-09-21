@@ -127,7 +127,7 @@ h3 {
     font-weight: 500;
 }
 
-p {
+p, ul, ol {
    color: #555;
 }
 
