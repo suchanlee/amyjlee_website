@@ -497,6 +497,12 @@ nav .nav-list li.logo a {
     margin-top: 20px;
 }
 
+.coffee-prototype {
+    display: block;
+    margin: 0 auto;
+    height: 300px;
+}
+
 .about {
     text-align: center;
     margin: 25px 0;
@@ -624,6 +630,11 @@ footer {
         max-width: 100%;
         width: 100%;
         margin-right: 100%;
+    }
+
+    .coffee-prototype {
+        width: 100%;
+        height: auto;
     }
 }
 
