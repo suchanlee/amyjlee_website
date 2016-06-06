@@ -20,6 +20,26 @@
   // List of projects
   var projects = [
     {
+      title         : 'Coffee Timer',
+      slug          : 'coffee-timer',
+      mainImage     : '/static/img/projects/coffee/rendering01.png',
+      thumbnail     : '/static/img/projects/coffee/thumbnail-11.png',
+      projectType   : 'Product Design',
+      medium        : 'Mobile App',
+      year          : '2016',
+      projectDetail : Handlebars.templates.coffee()
+    },
+    {
+      title         : 'Dentist Branding Kit',
+      slug          : 'dentist',
+      mainImage     : '/static/img/projects/dentist/main.png',
+      thumbnail     : '/static/img/projects/dentist/thumbnail-10.png',
+      projectType   : 'Branding',
+      medium        : 'Graphics',
+      year          : '2015',
+      projectDetail : Handlebars.templates.dentist()
+    },
+    {
       title         : 'Yogo: Your Poll on the Go',
       slug          : 'yogo',
       mainImage     : '/static/img/projects/yogo/logo01.png',

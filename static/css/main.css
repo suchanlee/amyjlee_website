@@ -131,6 +131,10 @@ p, ul, ol {
    color: #555;
 }
 
+video {
+    width: 100%;
+}
+
 nav {
     border-top: 4px solid #323232;
     padding: 22px 10px;
@@ -431,6 +435,64 @@ nav .nav-list li.logo a {
     text-align: center;
 }
 
+.dentist .project-main-image {
+  -webkit-border-radius: 280px;
+  -moz-border-radius: 280px;
+  border-radius: 280px;
+}
+
+.dentist-section {
+    margin-top: 35px;
+}
+
+.dentist-section .project-image {
+    margin-bottom: 40px;
+}
+
+.dentist-bcard-container {
+    text-align: center;
+}
+
+.dentist-bcard {
+    margin-bottom: 40px;
+    border: 1px solid #dedede;
+}
+
+.dentist-bcard:first-child {
+    margin-right: 10px;
+}
+
+.dentist-bcard:last-child {
+    margin-left: 10px;
+}
+
+.coffee-details-container {
+    margin-top: 50px;
+}
+
+.coffee-details-third {
+    width: 32%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1.5%;
+}
+
+.coffee-details-third:last-child {
+    margin-right: 0;
+}
+
+.coffee-details-third p {
+    margin-top: 0;
+}
+
+.coffee-details-third img {
+    width: 100%;
+}
+
+.coffee-details-inner-container {
+    margin-top: 20px;
+}
+
 .about {
     text-align: center;
     margin: 25px 0;
@@ -523,6 +585,12 @@ footer {
 
     .yogo-invision-text {
       font-size: 12px;
+    }
+
+    .yogo-detail-image {
+        max-width: 100%;
+        width: 100%;
+        margin-right: 100%;
     }
 }
 
