@@ -377,6 +377,10 @@ nav .nav-list li.logo a {
     margin-bottom: 35px;
 }
 
+.yogo-detail a {
+    text-decoration: none;
+}
+
 .yogo-detail-image {
     max-width: 300px;
     margin-right: 15px;
