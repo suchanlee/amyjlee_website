@@ -532,6 +532,35 @@ footer {
     text-align: center;
 }
 
+@media only screen and (max-width: 780px) and (min-width: 451px) {
+    .coffee-details-third {
+        width: 48%;
+        margin-bottom: 20px;
+        vertical-align: top;
+    }
+
+    .coffee-details-third:first-child {
+        margin-right: 1.5%;
+    }
+
+    .coffee-details-third.text {
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .coffee-details-third {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .coffee-details-third.text {
+        width: 100%;
+    }
+}
+
 @media only screen and (min-width: 381px) and (max-width: 680px) {
     body {
         padding: 0px 0px;
