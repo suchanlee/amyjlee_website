@@ -20,6 +20,16 @@
   // List of projects
   var projects = [
     {
+      title         : 'Budget App',
+      slug          : 'budget-app',
+      mainImage     : '/static/img/projects/budget/main.png',
+      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      projectType   : 'Product Design',
+      medium        : 'Mobile App',
+      year          : '2016',
+      projectDetail : Handlebars.templates.budget()
+    },
+    {
       title         : 'Coffee Timer',
       slug          : 'coffee-timer',
       mainImage     : '/static/img/projects/coffee/rendering01.png',
@@ -78,16 +88,6 @@
       projectDetail : Handlebars.templates.japanIcons()
     },
     {
-      title         : 'The Exhibition',
-      slug          : 'the-exhibition',
-      thumbnail     : '/static/img/projects/theexhibition/thumbnail-09.png',
-      mainImage     : '/static/img/projects/theexhibition/logo.png',
-      projectType   : 'Product',
-      medium        : 'Web',
-      year          : '2014',
-      projectDetail : Handlebars.templates.theexhibition()
-    },
-    {
       title         : 'Just Show Up',
       slug          : 'just-show-up',
       thumbnail     : '/static/img/projects/justshowup/thumbnail-08.png',
@@ -95,15 +95,6 @@
       medium        : 'Poster',
       year          : '2015',
       projectDetail : Handlebars.templates.justshowup()
-    },
-    {
-      title         : 'Gas Buddy Redesign',
-      mainImage     : '/static/img/projects/gasbuddy/gasbuddy_sp.png',
-      thumbnail     : '/static/img/projects/gasbuddy/thumbnail_gasbuddy.png',
-      projectType   : 'Conceptual Redesign',
-      medium        : 'Mobile App',
-      year          : '2014',
-      projectDetail : Handlebars.templates.gasbuddy()
     },
     {
       title         : 'Icons',

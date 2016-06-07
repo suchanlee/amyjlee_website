@@ -470,26 +470,36 @@ nav .nav-list li.logo a {
     margin-left: 10px;
 }
 
-.coffee-details-container {
+.project-details-container {
     margin-top: 50px;
 }
 
-.coffee-details-third {
+.project-details-third {
     width: 32%;
     display: inline-block;
     vertical-align: top;
     margin-right: 1.5%;
 }
 
-.coffee-details-third:last-child {
+.project-details-two-thirds {
+    width: 66%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.project-details-two-thirds img {
+    width: 100%;
+}
+
+.project-details-third:last-child {
     margin-right: 0;
 }
 
-.coffee-details-third p {
+.project-details-third p {
     margin-top: 0;
 }
 
-.coffee-details-third img {
+.project-details-third img {
     width: 100%;
 }
 
@@ -501,6 +511,65 @@ nav .nav-list li.logo a {
     display: block;
     margin: 0 auto;
     height: 300px;
+}
+
+.budget-video {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.budget-interaction-container {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.budget-interaction-container > div {
+    text-align: left;
+}
+
+.budget-interaction-container h4 {
+    margin: 0;
+}
+
+.budget-interaction {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.budget-interaction.video {
+    width: 30%;
+    margin-right: 15px;
+}
+
+.budget-interaction.video video {
+    width: 100%;
+}
+
+.budget-interaction.text {
+    width: 35%;
+    text-align: left;
+}
+
+.project-details-quarter {
+    display: inline-block;
+    width: 24%;
+    margin-right: 0.8%;
+    vertical-align: top;
+}
+
+.project-details-quarter:last-child {
+    margin-right: 0;
+}
+
+.project-details-quarter video, .project-details-quarter img {
+    width: 100%;
+}
+
+.project-details-half {
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
 }
 
 .about {
@@ -539,30 +608,38 @@ footer {
 }
 
 @media only screen and (max-width: 780px) and (min-width: 451px) {
-    .coffee-details-third {
+    .project-details-third {
         width: 48%;
         margin-bottom: 20px;
         vertical-align: top;
     }
 
-    .coffee-details-third:first-child {
+    .project-details-third:first-child {
         margin-right: 1.5%;
     }
 
-    .coffee-details-third.text {
+    .project-details-third.text {
         margin-right: 0;
+        width: 100%;
+    }
+
+    .project-details-two-thirds {
         width: 100%;
     }
 }
 
 @media only screen and (max-width: 450px) {
-    .coffee-details-third {
+    .project-details-third {
         width: 100%;
         margin-right: 0;
         margin-bottom: 20px;
     }
 
-    .coffee-details-third.text {
+    .project-details-third.text {
+        width: 100%;
+    }
+
+    .project-details-two-thirds {
         width: 100%;
     }
 }
