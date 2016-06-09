@@ -517,6 +517,7 @@ nav .nav-list li.logo a {
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 40px;
 }
 
 .budget-interaction-container {
@@ -641,6 +642,15 @@ footer {
 
     .project-details-two-thirds {
         width: 100%;
+    }
+
+    .budget-interaction.video, .budget-interaction.text, .budget-interaction-container, .project-details-quarter, .project-details-half {
+        width: 100%;
+    }
+
+    .budget-interaction.video, .project-details-quarter {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 }
 
@@ -883,5 +893,9 @@ footer {
     h2,
     h3 {
         page-break-after: avoid;
+    }
+
+    .budget-interactions {
+        margin-top: 20px;
     }
 }
