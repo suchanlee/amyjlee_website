@@ -46,7 +46,7 @@
       thumbnail     : '/static/img/projects/dentist/thumbnail-10.png',
       projectType   : 'Branding',
       medium        : 'Graphics',
-      year          : '2015',
+      year          : '2016',
       projectDetail : Handlebars.templates.dentist()
     },
     {
@@ -65,7 +65,7 @@
       mainImage     : '/static/img/projects/caltrainme/iphone-6-mockup.png',
       projectType   : 'Conceptual Redesign',
       medium        : 'Mobile App',
-      year          : '2014',
+      year          : '2015',
       projectDetail : Handlebars.templates.caltrainMe()
     },
     {
