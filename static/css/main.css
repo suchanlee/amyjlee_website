@@ -204,6 +204,64 @@ nav .nav-list li.logo a {
     font-size: 13px;
 }
 
+.cellar55 .project-main-image{
+    max-width: 350px;
+}
+
+.old-pres-img {
+    display: inline-block;
+    width: 45%;
+    border: 1px solid #eeeeee;
+    vertical-align: top;
+    margin-right: 1.5%;
+    margin-top: 1.5%;
+
+}
+
+.launch-site {
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+}
+
+.launch-img {
+    text-align: center;
+    width:100%;
+    opacity: 1;
+}
+
+.overlay-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%
+
+}
+
+.overlay {
+    display: inline-block;
+    width: 200px;
+    background-color: #AB8FF9;
+    color: white;
+    margin-top: 20%;
+    padding: 15px 35px;
+    font-size: 16px;
+    box-shadow: 1px 1px 2px #474747;
+    text-align: center;
+    letter-spacing: 1.2px;
+}
+
+
+.launch-site:hover .overlay {
+    background-color: #7C4DFF;    
+}
+
+.launch-site:hover .launch-img{
+    opacity: 0.5;
+}
+
+
 .projects-heading {
     color: #323232;
     text-decoration: none;
@@ -627,6 +685,13 @@ footer {
     .project-details-two-thirds {
         width: 100%;
     }
+    .old-pres-img {
+        width: 100%
+    }
+
+    .overlay-wrap{
+        width: 100%
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -651,6 +716,13 @@ footer {
     .budget-interaction.video, .project-details-quarter {
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    .old-pres-img {
+        width: 100%
+    }
+    .overlay-wrap{
+        width: 100%
     }
 }
 

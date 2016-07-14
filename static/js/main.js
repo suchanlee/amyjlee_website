@@ -19,6 +19,16 @@
 
   // List of projects
   var projects = [
+	{
+      title         : 'Cellar 55',
+      slug          : 'cellar55',
+      mainImage     : '/static/img/projects/cellar/thumb.png',
+      thumbnail     : '/static/img/projects/cellar/thumbnail-13.png',
+      projectType   : 'Product Design',
+      medium        : 'Web App',
+      year          : '2016',
+      projectDetail : Handlebars.templates.cellar()
+	},
     {
       title         : 'Budget App',
       slug          : 'budget-app',
