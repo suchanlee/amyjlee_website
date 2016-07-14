@@ -261,6 +261,30 @@ nav .nav-list li.logo a {
     opacity: 0.5;
 }
 
+.cellar-link {
+    text-decoration: none;
+    color: white;
+}
+
+.cellar-link a:link {
+    text-decoration: none;
+    color: white;
+}
+
+.cellar-link a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.cellar-link a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.cellar-link a:active {
+    text-decoration: none;
+    color: white;
+}
 
 .projects-heading {
     color: #323232;
