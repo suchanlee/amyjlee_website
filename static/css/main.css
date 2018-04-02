@@ -212,6 +212,17 @@ nav .nav-list li.logo a {
     font-size: 13px;
 }
 
+.slideshow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: black;
+    text-align: center;
+}
+
 .cellar55 .project-main-image{
     max-width: 350px;
 }

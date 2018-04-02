@@ -4,7 +4,7 @@
 
 'use strict';
 
-(function($, Router, Handlebars) {
+(function($, Router, Handlebars, Siema) {
 
   // utility function
   // https://gist.github.com/mathewbyrne/1280286
@@ -74,11 +74,11 @@
   };
 
   // Cache commonly used jquery objects
-  var $body          = $('body');
   var $projectList   = $('.project-list');
   var $projectDetail = $('.project-detail');
-  var $contact       = $('.contact');
-  var $about         = $('.about');
+
+  // siema
+  var siema;
 
   // Set and store project items
   var projectItems = [];
@@ -103,59 +103,119 @@
   }
 
   // bind clicks to load detail view
-  var handleDetailViewClick = function(evt) {
-    var id = parseInt($(evt.target).closest('li').attr('data-id'), 10);
+  var handleDetailViewClick = function(event) {
+    var id = parseInt($(event.target).closest('li').attr('data-id'), 10);
     if (window.location.pathname !== getPath(id)) {
       router.setRoute(getPath(id));
     }
-    $body.animate({ scrollTop: 0 });
-    evt.stopPropagation();
-    evt.preventDefault();
+    event.stopPropagation();
+    event.preventDefault();
   };
 
-  $('.projects-link').click(function(evt) {
+  $('.projects-link').click(function(event) {
     if (window.location.pathname !== '/projects') {
       router.setRoute('/projects');
     }
-    evt.preventDefault();
-    evt.stopPropagation();
+    event.preventDefault();
+    event.stopPropagation();
   });
 
   $projectList.on('click', '.project-thumbnail',    handleDetailViewClick);
   $projectList.on('click', '.project-item-heading', handleDetailViewClick);
   $projectList.on('click', '.project-item-title',   handleDetailViewClick);
 
-  var hideNonProjectListViews = function() {
-    $projectDetail.hide();
-    $about.hide();
-  };
+  var slideshow = document.createElement('div');
+  slideshow.className = 'slideshow';
+  document.body.appendChild(slideshow);
+
+  function closeSiema() {
+    if (siema != null) {
+      siema.destroy();
+    }
+
+    slideshow.style.display = 'none';
+
+    while (slideshow.firstChild != null) {
+      slideshow.removeChild(slideshow.firstChild);
+    }
+  }
+
+  function openSiema(event) {
+    closeSiema();
+
+    var imgs = getImgsInProjectDetail();
+    var imgsCount = imgs.length;
+    for (var i = 0; i < imgsCount; i++) {
+      var img = imgs[i];
+      img.setAttribute('data-siema-index', i);
+      var newImg = document.createElement('img');
+      newImg.src = img.getAttribute('src');
+      slideshow.appendChild(newImg);
+    }
+
+    slideshow.style.display = 'block';
+    siema = new Siema({
+      selector: '.slideshow',
+      startIndex: parseInt(event.currentTarget.getAttribute("data-siema-index"), 10)
+    });
+  }
+
+  function closeSiemaOnEsc(event) {
+    if (event.key === "Escape") {
+      closeSiema();
+    }
+  }
+
+  function getImgsInProjectDetail() {
+    var projectDetails = document.getElementsByClassName('project-details')[0];
+    if (projectDetails == null) {
+      return [];
+    } else {
+    return projectDetails.getElementsByTagName('img');
+    }
+  }
+
+  function unbindProjectDetailImagesWithSiema() {
+    var imgs = getImgsInProjectDetail();
+    var imgsCount = imgs.length;
+    for (var i = 0; i < imgsCount; i++) {
+      imgs[i].removeEventListener('click', openSiema);
+    }
+
+    document.removeEventListener('keyup', closeSiemaOnEsc)
+  }
+
+  function bindProjectDetailImagesWithSiema() {
+    var imgs = getImgsInProjectDetail();
+    var imgsCount = imgs.length;
+    for (var i = 0; i < imgsCount; i++) {
+      imgs[i].addEventListener('click', openSiema);
+    }
+
+    document.addEventListener('keyup', closeSiemaOnEsc)
+  }
 
   // views
   var landingView = function() {
-    hideNonProjectListViews();
+    $projectDetail.hide();
     $projectList.show();
     $projectDetail.html('').hide();
-    $('.project-item').css('opacity', 0).each(function(idx) {
-      $(this).delay((i++) * 50).fadeTo(250, 1);
+    $('.project-item').css('opacity', 0).each(function(index) {
+      $(this).delay((index - 1) * 100).fadeTo(250, 1);
     });
     document.title = 'Amy J Lee';
   };
 
   var detailView = function(projectId) {
+    unbindProjectDetailImagesWithSiema();
+
     var project = projects[projectId];
     $projectDetail.html(Handlebars.templates.projectDetail(project));
     $projectDetail.show();
     $projectList.show();
-    $about.hide();
-    document.title = project.title;
-  };
 
-  var aboutView = function() {
-    hideNonProjectListViews();
-    $about.show();
-    $projectList.hide();
-    $body.animate({ scrollTop: 0 });
-    document.title = 'About Amy';
+    bindProjectDetailImagesWithSiema();
+    document.title = project.title;
   };
 
   var router = Router({
@@ -165,5 +225,5 @@
   router.configure({ html5history: true });
   router.init();
 
-}(jQuery, Router, Handlebars));
+}(jQuery, Router, Handlebars, Siema));
 
