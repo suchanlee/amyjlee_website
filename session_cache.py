@@ -18,6 +18,9 @@ class SessionCache:
         return session_id
 
     def has(self, session_id):
+        if session_id is None:
+            return False
+
         session = self.cache[session_id]
 
         if session is None:

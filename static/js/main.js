@@ -19,7 +19,7 @@
 
   // List of projects
   var projects = [
-	{
+	  {
       title         : 'Cellar 55',
       slug          : 'cellar55',
       mainImage     : '/static/img/projects/cellar/thumb.png',
@@ -28,7 +28,7 @@
       medium        : 'Web App',
       year          : '2016',
       projectDetail : Handlebars.templates.cellar()
-	},
+	  },
     {
       title         : 'Budget App',
       slug          : 'budget-app',
@@ -124,7 +124,6 @@
   var $body          = $('body');
   var $projectList   = $('.project-list');
   var $projectDetail = $('.project-detail');
-  var $logo          = $('.logo a');
   var $contact       = $('.contact');
   var $about         = $('.about');
 
@@ -151,28 +150,9 @@
     evt.preventDefault();
   };
 
-  // view binders
-
-  // home
-  $logo.click(function(evt) {
-    if (window.location.pathname !== '/') {
-      router.setRoute('/');
-    }
-    evt.preventDefault();
-    evt.stopPropagation();
-  });
-
   $('.projects-link').click(function(evt) {
-    if (window.location.pathname !== '/') {
-      router.setRoute('/');
-    }
-    evt.preventDefault();
-    evt.stopPropagation();
-  });
-
-  $('.about-link').click(function(evt) {
-    if (window.location.pathname !== '/about') {
-      router.setRoute('/about');
+    if (window.location.pathname !== '/projects') {
+      router.setRoute('/projects');
     }
     evt.preventDefault();
     evt.stopPropagation();
@@ -195,7 +175,6 @@
     $('.project-item').css('opacity', 0).each(function(idx) {
       $(this).delay((i++) * 50).fadeTo(250, 1);
     });
-    $body.animate({ scrollTop: 0 });
     document.title = 'Amy J Lee';
   };
 
@@ -217,8 +196,7 @@
   };
 
   var router = Router({
-    '/': landingView,
-    '/about': aboutView,
+    '/projects': landingView,
     '/projects/:projectId/:projectSlug': detailView
   });
   router.configure({ html5history: true });
