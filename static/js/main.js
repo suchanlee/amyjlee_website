@@ -134,6 +134,7 @@
       siema = undefined;
     }
 
+    document.body.style.overflow = 'auto';
     slideshow.style.display = 'none';
 
     while (slideshow.firstChild != null) {
@@ -154,6 +155,7 @@
       slideshow.appendChild(newImg);
     }
 
+    document.body.style.overflow = 'hidden';
     slideshow.style.display = 'block';
     siema = new Siema({
       selector: '.slideshow',
