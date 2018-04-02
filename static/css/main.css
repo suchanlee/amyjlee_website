@@ -572,6 +572,10 @@ nav .nav-list li.logo a {
     margin-left: 10px;
 }
 
+.project-details img {
+    cursor: pointer;
+}
+
 .project-details-container {
     margin-top: 50px;
 }

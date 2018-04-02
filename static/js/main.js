@@ -131,6 +131,7 @@
   function closeSiema() {
     if (siema != null) {
       siema.destroy();
+      siema = undefined;
     }
 
     slideshow.style.display = 'none';
@@ -160,9 +161,23 @@
     });
   }
 
-  function closeSiemaOnEsc(event) {
-    if (event.key === "Escape") {
-      closeSiema();
+  function siemaKeyboardInteractions(event) {
+    switch (event.key) {
+      case "ArrowLeft":
+        if (siema != null) {
+          siema.prev();
+        }
+        break;
+      case "ArrowRight":
+        if (siema != null) {
+          siema.next();
+        }
+        break;
+      case "Escape":
+        closeSiema();
+        break;
+      default:
+        // noop
     }
   }
 
@@ -182,7 +197,7 @@
       imgs[i].removeEventListener('click', openSiema);
     }
 
-    document.removeEventListener('keyup', closeSiemaOnEsc)
+    document.removeEventListener('keyup', siemaKeyboardInteractions)
   }
 
   function bindProjectDetailImagesWithSiema() {
@@ -192,7 +207,7 @@
       imgs[i].addEventListener('click', openSiema);
     }
 
-    document.addEventListener('keyup', closeSiemaOnEsc)
+    document.addEventListener('keyup', siemaKeyboardInteractions)
   }
 
   // views
@@ -200,6 +215,7 @@
     $projectDetail.hide();
     $projectList.show();
     $projectDetail.html('').hide();
+    closeSiema();
     $('.project-item').css('opacity', 0).each(function(index) {
       $(this).delay((index - 1) * 100).fadeTo(250, 1);
     });
