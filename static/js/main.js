@@ -150,9 +150,21 @@
     for (var i = 0; i < imgsCount; i++) {
       var img = imgs[i];
       img.setAttribute('data-siema-index', i);
+
+      var container = document.createElement('div');
+      container.className = 'slideshow-entry-container';
+
       var newImg = document.createElement('img');
       newImg.src = img.getAttribute('src');
-      slideshow.appendChild(newImg);
+
+      var caption = document.createElement('div');
+      caption.className = 'slideshow-entry-caption';
+      caption.textContent = img.alt || '';
+
+      container.appendChild(newImg);
+      container.appendChild(caption);
+
+      slideshow.appendChild(container);
     }
 
     document.body.style.overflow = 'hidden';

@@ -223,6 +223,23 @@ nav .nav-list li.logo a {
     text-align: center;
 }
 
+.slideshow div {
+    height: 100%;
+}
+
+.slideshow img {
+    padding: 50px 0;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.slideshow .slideshow-entry-container {
+}
+
+.slideshow .slideshow-entry-caption {
+    color: white;
+}
+
 .cellar55 .project-main-image{
     max-width: 350px;
 }
