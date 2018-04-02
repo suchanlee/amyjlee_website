@@ -4,7 +4,7 @@
 
 'use strict';
 
-(function($, _, Router, Handlebars) {
+(function($, Router, Handlebars) {
 
   // utility function
   // https://gist.github.com/mathewbyrne/1280286
@@ -19,16 +19,6 @@
 
   // List of projects
   var projects = [
-	  {
-      title         : 'Cellar 55',
-      slug          : 'cellar55',
-      mainImage     : '/static/img/projects/cellar/thumb.png',
-      thumbnail     : '/static/img/projects/cellar/thumbnail-13.png',
-      projectType   : 'Product Design',
-      medium        : 'Web App',
-      year          : '2016',
-      projectDetail : Handlebars.templates.cellar()
-	  },
     {
       title         : 'Budget App',
       slug          : 'budget-app',
@@ -48,26 +38,6 @@
       medium        : 'Mobile App',
       year          : '2016',
       projectDetail : Handlebars.templates.coffee()
-    },
-    {
-      title         : 'Dentist Branding Kit',
-      slug          : 'dentist',
-      mainImage     : '/static/img/projects/dentist/main.png',
-      thumbnail     : '/static/img/projects/dentist/thumbnail-10.png',
-      projectType   : 'Branding',
-      medium        : 'Graphics',
-      year          : '2016',
-      projectDetail : Handlebars.templates.dentist()
-    },
-    {
-      title         : 'Yogo: Your Poll on the Go',
-      slug          : 'yogo',
-      mainImage     : '/static/img/projects/yogo/logo01.png',
-      thumbnail     : '/static/img/projects/yogo/thumbnail_yogo.png',
-      projectType   : 'Product Design',
-      medium        : 'Web App',
-      year          : '2015',
-      projectDetail : Handlebars.templates.yogo()
     },
     {
       title         : 'Rethinking CaltrainMe',
@@ -96,23 +66,6 @@
       medium        : 'Illustration',
       year          : '2015',
       projectDetail : Handlebars.templates.japanIcons()
-    },
-    {
-      title         : 'Just Show Up',
-      slug          : 'just-show-up',
-      thumbnail     : '/static/img/projects/justshowup/thumbnail-08.png',
-      projectType   : 'Event Promotion',
-      medium        : 'Poster',
-      year          : '2015',
-      projectDetail : Handlebars.templates.justshowup()
-    },
-    {
-      title         : 'Icons',
-      thumbnail     : '/static/img/projects/icons/thumbnail_beauty02.png',
-      projectType   : 'Icons',
-      medium        : 'Illustration',
-      year          : '2015',
-      projectDetail : Handlebars.templates.icons()
     }
   ];
 
@@ -130,7 +83,17 @@
   // Set and store project items
   var projectItems = [];
   for (var i = 0; i < projects.length; i++) {
-    var context = _.extend({ id: i, slug: slugify(projects[i].title)}, projects[i]);
+    var project = projects[i];
+    var context = {};
+    var keys = Object.keys(project);
+    var keyCount = keys.length;
+
+    for (var j = 0; j < keyCount; j++) {
+      context[keys[j]] = project[keys[j]];
+    }
+    context.id = i;
+    context.slug = slugify(project.title);
+
     projectItems.push(Handlebars.templates.projectItem(context));
   }
 
@@ -202,5 +165,5 @@
   router.configure({ html5history: true });
   router.init();
 
-}(jQuery, _, Router, Handlebars));
+}(jQuery, Router, Handlebars));
 
