@@ -24,27 +24,15 @@
       slug          : 'budget-app',
       mainImage     : '/static/img/projects/budget/main.png',
       thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
-      projectType   : 'Product Design',
-      medium        : 'Mobile App',
+      projectType   : 'Conceptual mobile app design',
       year          : '2016',
       projectDetail : Handlebars.templates.budget()
-    },
-    {
-      title         : 'Coffee Timer',
-      slug          : 'coffee-timer',
-      mainImage     : '/static/img/projects/coffee/rendering01.png',
-      thumbnail     : '/static/img/projects/coffee/thumbnail-11.png',
-      projectType   : 'Product Design',
-      medium        : 'Mobile App',
-      year          : '2016',
-      projectDetail : Handlebars.templates.coffee()
     },
     {
       title         : 'Rethinking CaltrainMe',
       thumbnail     : '/static/img/projects/caltrainme/thumbnail_caltrain.png',
       mainImage     : '/static/img/projects/caltrainme/iphone-6-mockup.png',
       projectType   : 'Conceptual Redesign',
-      medium        : 'Mobile App',
       year          : '2015',
       projectDetail : Handlebars.templates.caltrainMe()
     },
@@ -54,7 +42,6 @@
       thumbnail     : '/static/img/projects/chromedl/thumbnail-07.png',
       mainImage     : '/static/img/projects/chromedl/chrome.gif',
       projectType   : 'Conceptual Redesign',
-      medium        : 'Browser',
       year          : '2015',
       projectDetail : Handlebars.templates.chromedownload()
     },
@@ -63,7 +50,6 @@
       slug          : 'japan-trip-icons',
       thumbnail     : '/static/img/projects/japanalphabets/thumbnail_abc.png',
       projectType   : 'Icons',
-      medium        : 'Illustration',
       year          : '2015',
       projectDetail : Handlebars.templates.japanIcons()
     }

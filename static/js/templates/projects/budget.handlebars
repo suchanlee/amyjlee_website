@@ -1,142 +1,85 @@
+<p>
+  I started brainstorming and designing this conceptual budget app after being an avid user of <a href="http://www.dailybudget.de/" target="_blank">Daily Budget</a>.
+</p>
+
 <h2>Inspiration</h2>
 <p>
-  One of the first things I struggled with after graduating from college was budgeting. "Saving up" sounded easy but by the end of the month, I was always at a net zero. I wasn't sure how to set finance goals, observe my spending pattern, and analyze them based on categories. I tried some finance/budget apps like <a href="https://www.mint.com/" target="_blank">Mint</a> and <a href="https://itunes.apple.com/us/app/daily-budget-original-fastest/id651896614?ign-mpt=uo%3D8" target="_blank">Daily Budget</a> but nothing totally satisfied my needs.
+  One of the first things I struggled with after graduating from college was budgeting. "Saving up" was a common concept but "budgeting" seemed so foreign. I knew I wanted to save up but I didn't know how.
 </p>
-<p>Those apps were definitely good and feature-ful but I had my own criteria:</p>
+
+<p>
+  So I tried a few budgeting apps. I wanted to focus on saving up. Many apps focused on spending analysis (which I didn't need much since I already knew where I spent more than I should -- coffee and shopping), while lacking in core, simple budgeting features. Also, those apps wanted to automate everything and wanted more information than what I was comfortable providing. Overall, those apps felt much heavier than what I needed them to be while not getting the core budget functionality right.
+</p>
+
+<p>The problem I wanted to solve was to create a budgeting app that fit the following criteria:</p>
 <ul>
-  <li>Simple and easy to use</li>
-  <li>Follows the daily budget method</li>
-  <li>Super easy and fast to add transactions, but only manually (manually keeping track of transactions helps me be more aware of my budget)</li>
-  <li>No need to link my finance information to the application (credit cards, bank accounts, etc.)</li>
+  <li>Easy to create a budget and add expenses and income</li>
+  <li>No need to link my cards and banking information</li>
   <li>No signing up</li>
-  <li>Sync data with other phones</li>
+  <!-- <li>Support budget sharing with others (e.g. significant other)</li> -->
 </ul>
-<p>Apps like Mint were definitely too complex and required all my financial data with which I didn't feel comfortable. Daily Budget fit my needs the best, but it didn't sync with other phones without using iCloud and I hate using iCloud and didn't want to use iCloud just for this app. :/. Being able to sync is a must-have feature for me because my husband and I have combined our finances and are on a single budget.</p>
 
 <h2>Design Process</h2>
-<p>There were multiple facets to the product: onboarding, recording transactions, analytics, and connecting with other devices. It was important to carefully adjust to these layers but keep the design simple and quickly learnable.</p>
-<img class="project-image" src="/static/img/projects/budget/sketch.png" alt="budget app sketches">
+<p>There were multiple facets to the product: onboarding, recording spendings, analytics, and connecting with other devices. It was important to carefully adjust to these layers but keep the design simple and quickly learnable.</p>
 
-<div class="project-details-container">
-  <h3>Initial Take</h3>
-  <div class="project-details-third text">
-    My initial take was to be more visual and analytics-focused, as shown on the preliminary mocks. Understanding the spending and saving patterns seemed as important as recording the daily expenses. But after using the Daily Budget app more and more, I found that I rarely ever looked at the analytics and cared most about "how much budget do I have left?".
-  </div>
-  <div class="project-details-third">
-    <img src="/static/img/projects/budget/old1.png" alt="initial mock 1 for budget app">
-  </div>
-  <div class="project-details-third">
-    <img src="/static/img/projects/budget/old2.png" alt="initial mock 2 for budget app">
-  </div>
-</div>
-<div class="project-details-container">
-  <h3>Second Round</h3>
-  <div class="project-details-third text">
-    <p>After removing the analytics from the main page, I questioned the structure of a daily budget: shouldn't it be more specific? Knowing how much I can spend in certain categories seemed more useful. For instance, there could be a weekly budget for eating out or groceries.</p>
-    <p>But this direction clashed with the daily budgeting method and increased the complexity of the application.</p>
-    <p>So instead of trying to come up with a new and innovative way of recording and viewing spendings, I focused on simplification and adding the main feature missing from Daily Budget, sync.</p>
-  </div>
-  <div class="project-details-third">
-    <img src="/static/img/projects/budget/old3.png" alt="initial mock 3 for budget app">
-  </div>
-</div>
+<img class="project-image" src="/static/img/projects/budget/sketch.png" alt="Budget app initial sketches.">
 
-<h2>Final Mock</h2>
-<div class="centered-text">
-  <video class="budget-video" src="/static/img/projects/budget/full.mp4" type="video/mp4" preload="metadata" controls></video>
-</div>
+<h3>Initial Take</h3>
+<p>
+  Initial take was more visual and analytics-focused, as shown on the preliminary mocks below. It was simple and easy to use, but placed analytics at the same importance as the basic features. The charts and graphs made the application pretty but it added additional complexity to the app which was against my criteria. Sure, understanding the spending and saving patterns are important but it didn't solve my problem.
+</p>
+<img src="/static/img/projects/budget/budget-0-old.png" alt="Initial take. It was more visual and analytics focused, which was pretty but didn't solve my problem.">
+<figcaption>Budget app, initial take</figcaption>
 
-<h2 class="budget-interactions">Interactions</h2>
-  <h3>Adding Expenses</h3>
-  <div class="budget-interaction-container centered-text">
-    <div class="budget-interaction video">
-      <video src="/static/img/projects/budget/adding_expense.mov" controls></video>
-    </div>
-    <div class="budget-interaction text">
-      Adding expenses or extra income should be simple. This behavior should feel seamless and effortless. In here, I tried to simplify and condense some of the steps and provide visual queues with colors.
-    </div>
-  </div>
-  <div class="budget-interaction-container">
-    <div class="project-details-quarter">
-      Tap the minus button (or the plus button for extra income) and choose from the default categories, such as coffee, groceries, gas, etc. These categories can be edited and users can add new categories.
-    </div>
-    <div class="project-details-quarter">
-      <img src="/static/img/projects/budget/expense-0.png" alt="budget expense 0">
-    </div>
-    <div class="project-details-quarter">
-      <img src="/static/img/projects/budget/expense-1.png" alt="budget expense 1">
-    </div>
-    <div class="project-details-quarter">
-      <img src="/static/img/projects/budget/expense-2.png" alt="budget expense 2">
-    </div>
-  </div>
-  <div class="project-details-half">
-    <p>Then, enter the amount spent. Notes can be added for more detailed categorization.</p>
-    <p>Activity is logged and listed by time and color-coded based on the category. The activities view is accessible from the main menu.</p>
-  </div>
-  <div class="budget-interaction-container">
-    <div class="project-details-quarter">
-      <img src="/static/img/projects/budget/expense-3.png" alt="budget expense 3">
-    </div>
-    <div class="project-details-quarter">
-      <img src="/static/img/projects/budget/expense-4.png" alt="budget expense 4">
-    </div>
-    <div class="project-details-quarter">
-      <img src="/static/img/projects/budget/expense-5.png" alt="budget expense 5">
-    </div>
-    <div class="project-details-quarter">
-      <img src="/static/img/projects/budget/activities.png" alt="budget activities">
-    </div>
-  </div>
+<h3>Rethinking 🤔</h3>
+<p>
+  Then I questioned the structure of daily budget. Shouldn’t it be more specific? Knowing how much I can spend in certain categories seemed more useful. For instance, there should be a weekly budget given for eating out or groceries.
+</p>
+<p>
+  Yet, this direction clashed with the concept of daily budgeting and raised complexity in onboarding process. So, instead of trying to come up with a new and innovative way of recording and viewing spendings, I focused on simplifying the steps and provide the connection feature.
+</p>
 
-  <div class="project-details-container">
-    <h3>Connecting with Other Devices</h3>
-    <h4>Sending the passcode</h4>
-    <div class="budget-interaction-container centered-text">
-      <div class="budget-interaction video">
-        <video src="/static/img/projects/budget/connect_01.mov" controls></video>
-      </div>
-      <div class="budget-interaction text">
-        A passcode is used to allow other devices to sync with your budget. This code is sent via text message and must be entered on this application on the designated device.
-      </div>
-    </div>
-    <div class="budget-interaction-container">
-      <div class="project-details-third">
-        <img src="/static/img/projects/budget/connect.png" alt="budget connect">
-      </div>
-      <div class="project-details-third">
-        <img src="/static/img/projects/budget/send_code.png" alt="budget send code">
-      </div>
-      <div class="project-details-third">
-        <img src="/static/img/projects/budget/send_success.png" alt="budget send success">
-      </div>
-    </div>
-    <h4>Syncing</h4>
-    <div class="budget-interaction-container centered-text">
-      <div class="budget-interaction video">
-        <video src="/static/img/projects/budget/connect_02.mov" controls></video>
-      </div>
-      <div class="budget-interaction text">
-        Enter the 4-digit code to sync with another device. Since a new budget is being added, the user will be prompted to either keep or replace the current budget
-      </div>
-    </div>
-    <div class="budget-interaction-container">
-      <div>
-        <div class="project-details-quarter">
-          <img src="/static/img/projects/budget/retrieve.png" alt="budget retreive 0">
-        </div>
-        <div class="project-details-quarter">
-          <img src="/static/img/projects/budget/retrieve-3.png" alt="budget retreive 1">
-        </div>
-        <div class="project-details-quarter" >
-          <img src="/static/img/projects/budget/retrieve-4.png" alt="budget retreive 2">
-        </div>
-        <div class="project-details-quarter" >
-          <img src="/static/img/projects/budget/retrieve-6.png" alt="budget retreive 3">
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<h2>Final Design</h2>
+<video class="budget-video" src="/static/img/projects/budget/full.mp4" type="video/mp4" preload="metadata" controls></video>
 
-<img src="/static/img/projects/budget/rendering2.png" alt="budget rendering2" class="project-image">
+<h3>Adding expenses</h3>
+<p>
+  Adding expenses or extra income should be simple. This behavior should feel seamless and effortless to users. Hence, I wanted to simplify and condesne some of the steps and provide visual queus with colors.
+</p>
+<video src="/static/img/projects/budget/adding_expense.mov" controls></video>
+<p>
+  Tap the minus button (or the plus for extra income) and choose from the default categories, such as coffee, groceries, gas, and others. These categories can be edited and users can add new categories.
+</p>
+<p>
+  Then, enter the amount spent. Notes can be added for more detailed categorization.
+</p>
+<p>Entered activities are listed by time and color-coded based on the category.</p>
+
+<img src="/static/img/projects/budget/budget-1-adding expenses.png" alt="Adding expenses.">
+<img src="/static/img/projects/budget/budget-2-adding expenses.png" alt="Adding expenses.">
+
+<h3>Connecting with other devices</h3>
+<p>
+  One of the core features of the design was connecting and syncing data with other devices. There are two ways to connect: duplicate your data to another device or retrieve data from a different device.
+</p>
+
+<video src="/static/img/projects/budget/connect_01.mov" controls></video>
+
+<p>
+  <b>Copy and share your budget</b><br>
+  A passcode will be generated for connecting with other devices. This code can be sent via messages and must be entered on the designated device to duplicate and retrieve data.
+</p>
+<img src="/static/img/projects/budget/budget-3-connecting.png" alt="Copy and share your budget">
+<figcaption>Copy and share your budget</figcaption>
+
+<p>
+  <b>Retrieve budget from another device</b><br>
+  Enter the 4-digit code when accessing data on another device. Since a new set of data is being added, users will be prompted to either keep or replace the current data.
+</p>
+<img src="/static/img/projects/budget/budget-4-connecting.png" alt="Adding expenses.">
+<figcaption>Retrieve budget from another device</figcaption>
+
+<h2>Next Steps</h2>
+<p>
+  Onboarding and analytics are not part of design mocks yet. Onboarding pages feature establishing recurring payments and goal for monthly saving. These are the first steps users would complete. Analytics will show future projections and spending patterns.
+</p>
