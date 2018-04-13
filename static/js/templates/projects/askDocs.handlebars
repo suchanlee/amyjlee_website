@@ -1,0 +1,135 @@
+<p>
+  <a href="https://www.healthtap.com/" target="_blank">HealthTap</a> aims to make health care affordable and accessible via telemedicine and remote consultations through its <a href="https://itunes.apple.com/us/app/healthtap/id466079030?mt=8" target="_blank">mobile app</a>. It provides 4 ways for users to talk to doctors:
+</p>
+<ol>
+  <li>Send a message</li>
+  <li>Schedule a virtual appointment</li>
+  <li>Hop on a call with a doctor online at the moment</li>
+  <li>Post an anonymous question</li>
+</ol>
+<p>
+  However, it's not always clear which of these options provides the best consult for their case. The workflow of triaging the best consult method is called <b>Ask Docs</b>.
+</p>
+
+<p>My first project at HealthTap was to redesign this core flow of the app.</p>
+
+<img src="/static/img/projects/askdocs/01-old.png" alt="What Ask Docs looked like when I joined">
+<figcaption>What Ask Docs looked like when I joined</figcaption>
+
+<h2>Problem</h2>
+<p>Here are three main problem areas that I found.</p>
+
+<p><b>1. Far too different from how people usually seek medical help</b></p>
+<ul>
+  <li>
+    People talk to doctors when they have health concerns. They call their family doctor or whomever is nearest. Then schedule based on the availability. This mental model for reaching out to doctors was lost in the product.
+  </li>
+  <li>
+    The decision points in the current product were not user friendly; these steps were based on the product architecture and not on user experience.
+  </li>
+</ul>
+
+<p><b>2. Inconsistent user experience and low learnability</b></p>
+<ul>
+  <li>
+    The Ask Docs flow seemed convoluted and to be constantly changing to some of our users. This was because some of the features became unavailable based on the doctors’ availability. And when they became unavailable, instead of displaying them as inactive, they were hidden away. To our users, this looked as if the offered services were suddenly removed.
+  </li>
+  <li>
+    Because of this miscommunication, user’s learnability was very low. A lot of people complained about not being able to find the free option that had existed just a day ago on the same screen, in the same section!
+  </li>
+</ul>
+
+<p><b>3. Unclear marketing product jargon</b></p>
+<p>
+  The marketing team rebranded product services by renaming them. On-demand virtual consults was branded as <b>Prime</b> and private doctors consults as <b>Concierge</b>. Neither of those names really stuck with our users and these branded names added more confusion.
+</p>
+
+<h2>Process</h2>
+<p>In this project, I designed the product from end to end.</p>
+
+<p><b>Problem Identification and Ideation</b></p>
+<p>
+  I started by identifying the problems, researching, ideating, user testing, final production, and product quality assessment. I worked together with a product manager to map out the problems and solutions.
+</p>
+
+<img src="/static/img/projects/askdocs/old-vs-new.png" alt="Old workflow vs new workflow">
+<figcaption>Interactions in the old flow (left) vs. new flow (right)</figcaption>
+
+<p><b>Validate, Prototype, Iterate</b></p>
+<p>
+  Then I gathered user insight on the initial design by
+</p>
+<ul>
+  <li>
+    Talking and stepping through the design with our Customer Success team (the team to whom customers send their feedback and complaints). The team had already gathered and organized various user feedback for each product. Even before actually reaching out to the users, I was able to map out major problems and confusion on the Ask Docs flow.
+  </li>
+  <li>
+    Hopping around different ☕️coffee shops☕️ in downtown Palo Alto and asking strangers about initial designs which helped solidify what worked and what didn't. I conducted a series of interviews. Interviewees were first shown the current product. I then gave them a scenario (i.e. tell me how you’d use this app when you found out that you’ve got a rash on your back) and asked to walk through what they’d do in the current Ask Docs flow. Based on the research, I was able to identify additional problems.
+  </li>
+  <li>
+    Sending invision prototypes to usertesting.com provides some quick and detailed feedback.
+  </li>
+</ul>
+<p>
+  Before jumping into mockups, I researched a few other products to benchmark. I looked into three different products (Avvo, One Medical, and Thumbtack) that were all focused around searching for an expert.
+</p>
+<p>
+  Throughout the design process, I reviewed and continuously iterated on the design elements with other fellow designers, product managers, and engineers. In particular I often sat down with engineers to work together on what worked and what didn't and tweaked designs to cover edge cases that I hadn't initially thought of.
+</p>
+
+<img src="/static/img/projects/askdocs/03.png" alt="Iteractions on the doctor listing">
+<figcaption>Iteractions on the doctor listings</figcaption>
+
+<img src="/static/img/projects/askdocs/04.png" alt="Iterations on the basic Ask Docs flow">
+<figcaption>Iterations on the basic Ask Docs flow</figcaption>
+
+<img src="/static/img/projects/askdocs/05.png" alt="Iterations on choosing filters and doctor selection">
+<figcaption>Iterations on choosing filters and doctor selection</figcaption>
+
+<h2>Design Solution</h2>
+<p>I tackled each of the above stated problems in the following design decisions:</p>
+
+<p><b>"Far too different from how people usually seek medical help"</b></p>
+<p>I tried to mimic how people usually look for doctors. This meant removing many of the initial steps of the original Ask Docs flow.</p>
+
+<ul>
+  <li>
+    Just like a receptionist in a hospital, we ask our users for their health concern.
+  </li>
+  <li>
+    We search using their input and fetch a list of suggested doctors with relevant specialties.
+  </li>
+  <li>
+    Users may skip this part if it is difficult to describe their health concern. In this case, we show their primary care providers, doctors that are nearby, and doctors who are available at the moment.
+  </li>
+  <li>
+    Users can choose whether they’d like to schedule an appointment or talk to the doctor(s) right away. Each provider has have an indicator showing which methods can be used for virtual consult: voice or video chat right away if online, asynchronous messaging, or a scheduled virtual appointment.
+  </li>
+  <li>
+    Other services like on-demand virtual consult and “Send a free question” will still be shown in the doctor list.
+  </li>
+</ul>
+
+<img src="/static/img/projects/askdocs/disection.png" alt="Dissection of the new Choose a Doctor view">
+<figcaption>Dissection of the new Choose a Doctor view</figcaption>
+
+<p><b>"Inconsistent user experience and low learnability"</b></p>
+<p>
+  Disabled features and components are not removed. It's displayed as disabled and users are provided explanations on why they're disabled.
+</p>
+<p>
+  Also, the simplified workflow allows users to get to their consult options in fewer steps, which makes the app more intuitive to use and easier to learn.
+</p>
+
+<p><b>"Unclear marketing product jargon"</b></p>
+<p>
+  Removed the marketing jargon "Prime" and "Concierge" and replaced them with what they are: "Virtual appointment" and "Live chat", with descriptions of what they each one entails.
+</p>
+
+<img src="/static/img/projects/askdocs/06.png" alt="">
+<figcaption>Dissection of the new Choose a Doctor view</figcaption>
+
+<img src="/static/img/projects/askdocs/07-b.png" alt="Dissection of the new Choose a Doctor view">
+<figcaption>Dissection of the new Choose a Doctor view</figcaption>
+
+

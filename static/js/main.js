@@ -20,8 +20,15 @@
   // List of projects
   var projects = [
     {
+      title         : 'Ask Docs',
+      mainImage     : '/static/img/projects/budget/main.png',
+      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      projectType   : 'End-to-end product design',
+      year          : '2016',
+      projectDetail : Handlebars.templates.askDocs()
+    },
+    {
       title         : 'Budget App',
-      slug          : 'budget-app',
       mainImage     : '/static/img/projects/budget/main.png',
       thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
       projectType   : 'Conceptual mobile app design',
@@ -32,22 +39,20 @@
       title         : 'Rethinking CaltrainMe',
       thumbnail     : '/static/img/projects/caltrainme/thumbnail_caltrain.png',
       mainImage     : '/static/img/projects/caltrainme/iphone-6-mockup.png',
-      projectType   : 'Conceptual Redesign',
+      projectType   : 'Conceptual mobile app redesign',
       year          : '2015',
       projectDetail : Handlebars.templates.caltrainMe()
     },
     {
       title         : 'Chrome Download Redesign',
-      slug          : 'chrome-download',
       thumbnail     : '/static/img/projects/chromedl/thumbnail-07.png',
       mainImage     : '/static/img/projects/chromedl/chrome.gif',
-      projectType   : 'Conceptual Redesign',
+      projectType   : 'Conceptual web app study',
       year          : '2015',
       projectDetail : Handlebars.templates.chromedownload()
     },
     {
       title         : 'Japan Trip Icon Alphabet Book',
-      slug          : 'japan-trip-icons',
       thumbnail     : '/static/img/projects/japanalphabets/thumbnail_abc.png',
       projectType   : 'Icons',
       year          : '2015',

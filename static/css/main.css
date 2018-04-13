@@ -136,7 +136,7 @@ h3 {
 }
 
 p, ul, ol {
-    color: #555;
+    color: #343A40;
 }
 
 video {
@@ -397,13 +397,15 @@ nav .nav-list li.logo a {
 .project-details > h3,
 .project-details > h4,
 .project-details > p,
-.project-details > ul {
-    max-width: 600px;
+.project-details > ul,
+.project-details > ol {
+    max-width: 550px;
     margin-left: auto;
     margin-right: auto;
 }
 
 .project-details > h3 {
+    font-size: 16px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -437,6 +439,10 @@ nav .nav-list li.logo a {
     margin: 30px auto;
     width: 100%;
     max-width: 300px;
+}
+
+.project-details ol {
+    padding-left: 65px;
 }
 
 .project-main-image {
@@ -538,6 +544,7 @@ nav .nav-list li.logo a {
     outline: none;
     border: none;
     border-bottom: 2px solid #323232;
+    border-radius: 0px;
 }
 
 footer {
