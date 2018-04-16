@@ -22,7 +22,7 @@
     {
       title         : 'Care Plans - Authoring',
       mainImage     : '/static/img/projects/budget/main.png',
-      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      thumbnail     : '/static/img/thumbnails/authoring.png',
       projectType   : 'End-to-end product design',
       year          : '2017',
       projectDetail : Handlebars.templates.authoring()
@@ -30,7 +30,7 @@
     {
       title         : 'Care Plans - Management',
       mainImage     : '/static/img/projects/budget/main.png',
-      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      thumbnail     : '/static/img/thumbnails/mgmt.png',
       projectType   : 'End-to-end product design',
       year          : '2017',
       projectDetail : Handlebars.templates.management()
@@ -38,7 +38,7 @@
     {
       title         : 'Ask Docs',
       mainImage     : '/static/img/projects/budget/main.png',
-      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      thumbnail     : '/static/img/thumbnails/askdocs.png',
       projectType   : 'End-to-end product design',
       year          : '2016',
       projectDetail : Handlebars.templates.askDocs()
@@ -46,15 +46,15 @@
     {
       title         : 'Budget App',
       mainImage     : '/static/img/projects/budget/main.png',
-      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      thumbnail     : '/static/img/thumbnails/budget.png',
       projectType   : 'Conceptual mobile app design',
       year          : '2016',
       projectDetail : Handlebars.templates.budget()
     },
     {
       title         : 'Rethinking CaltrainMe',
-      thumbnail     : '/static/img/projects/caltrainme/thumbnail_caltrain.png',
-      mainImage     : '/static/img/projects/caltrainme/iphone-6-mockup.png',
+      thumbnail     : '/static/img/thumbnails/caltrain.png',
+      mainImage     : '/static/img/projects/caltrainme/caltrainme_main.jpg',
       projectType   : 'Conceptual mobile app redesign',
       year          : '2015',
       projectDetail : Handlebars.templates.caltrainMe()
@@ -69,7 +69,7 @@
     },
     {
       title         : 'Japan Trip Icon Alphabet Book',
-      thumbnail     : '/static/img/projects/japanalphabets/thumbnail_abc.png',
+      thumbnail     : '/static/img/thumbnails/abc.png',
       projectType   : 'Icons',
       year          : '2015',
       projectDetail : Handlebars.templates.japanIcons()
