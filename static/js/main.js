@@ -21,7 +21,6 @@
   var projects = [
     {
       title         : 'Care Plans - Authoring',
-      mainImage     : '/static/img/projects/budget/main.png',
       thumbnail     : '/static/img/thumbnails/authoring.png',
       projectType   : 'End-to-end product design',
       year          : '2017',
@@ -29,7 +28,6 @@
     },
     {
       title         : 'Care Plans - Management',
-      mainImage     : '/static/img/projects/budget/main.png',
       thumbnail     : '/static/img/thumbnails/mgmt.png',
       projectType   : 'End-to-end product design',
       year          : '2017',
@@ -37,7 +35,6 @@
     },
     {
       title         : 'Ask Docs',
-      mainImage     : '/static/img/projects/budget/main.png',
       thumbnail     : '/static/img/thumbnails/askdocs.png',
       projectType   : 'End-to-end product design',
       year          : '2016',
