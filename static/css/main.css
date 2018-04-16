@@ -144,8 +144,11 @@ video {
 }
 
 nav {
-    border-top: 4px solid #323232;
+    max-width: 900px;
+    width: 100%;
     padding: 22px 10px;
+    margin: 0 auto;
+    border-top: 4px solid #323232;
     font-weight: 600;
 }
 
@@ -270,9 +273,11 @@ nav .nav-list li.logo a {
 }
 
 .project-list {
+    max-width: 900px;
+    width: 100%;
     list-style-type: none;
     padding: 0px;
-    margin-top: 15px;
+    margin: 15px auto 0;
 }
 
 .project-item {
@@ -307,10 +312,18 @@ nav .nav-list li.logo a {
     text-decoration: underline;
 }
 
-.project-detail {
+.project-detail-section {
     display: none;
+}
+
+.project-detail {
     margin: 40px auto 50px;
-    padding-bottom: 50px;
+}
+
+.project-detail-divider {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto 50px;
     border-bottom: 1px solid #ccc;
 }
 

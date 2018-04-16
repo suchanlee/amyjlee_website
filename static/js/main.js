@@ -28,6 +28,14 @@
       projectDetail : Handlebars.templates.authoring()
     },
     {
+      title         : 'Care Plans - Management',
+      mainImage     : '/static/img/projects/budget/main.png',
+      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      projectType   : 'End-to-end product design',
+      year          : '2017',
+      projectDetail : Handlebars.templates.management()
+    },
+    {
       title         : 'Ask Docs',
       mainImage     : '/static/img/projects/budget/main.png',
       thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
@@ -75,6 +83,7 @@
   // Cache commonly used jquery objects
   var $projectList   = $('.project-list');
   var $projectDetail = $('.project-detail');
+  var $projectDetailSection = $('.project-detail-section');
 
   // siema
   var siema;
@@ -226,9 +235,9 @@
 
   // views
   var landingView = function() {
-    $projectDetail.hide();
+    $projectDetailSection.hide();
     $projectList.show();
-    $projectDetail.html('').hide();
+    $projectDetail.html('');
     closeSiema();
     $('.project-item').css('opacity', 0).each(function(index) {
       $(this).delay((index - 1) * 100).fadeTo(250, 1);
@@ -241,7 +250,7 @@
 
     var project = projects[projectId];
     $projectDetail.html(Handlebars.templates.projectDetail(project));
-    $projectDetail.show();
+    $projectDetailSection.show();
     $projectList.show();
 
     bindProjectDetailImagesWithSiema();
