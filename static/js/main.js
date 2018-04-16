@@ -20,6 +20,14 @@
   // List of projects
   var projects = [
     {
+      title         : 'Care Plans - Authoring',
+      mainImage     : '/static/img/projects/budget/main.png',
+      thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
+      projectType   : 'End-to-end product design',
+      year          : '2017',
+      projectDetail : Handlebars.templates.authoring()
+    },
+    {
       title         : 'Ask Docs',
       mainImage     : '/static/img/projects/budget/main.png',
       thumbnail     : '/static/img/projects/budget/thumbnail-12.png',
