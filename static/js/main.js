@@ -36,6 +36,7 @@
     {
       title         : 'Ask Docs',
       thumbnail     : '/static/img/thumbnails/askdocs.png',
+      mainImage     : '/static/img/projects/askdocs/shell.png',
       projectType   : 'End-to-end product design',
       year          : '2016',
       projectDetail : Handlebars.templates.askDocs()
@@ -140,7 +141,7 @@
       siema = undefined;
     }
 
-    document.body.style.overflow = 'auto';
+    // document.body.style.overflow = 'auto';
     slideshow.style.display = 'none';
 
     while (slideshow.firstChild != null) {
