@@ -201,34 +201,6 @@ nav.nav-list .logo {
     margin-left: 20px;
 }
 
-.slideshow {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: black;
-    text-align: center;
-}
-
-.slideshow div {
-    height: 100%;
-}
-
-.slideshow img {
-    padding: 50px 0;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.slideshow .slideshow-entry-container {
-}
-
-.slideshow .slideshow-entry-caption {
-    color: white;
-}
-
 .overlay-wrap {
     position: absolute;
     top: 0;
@@ -414,7 +386,6 @@ nav.nav-list .logo {
 }
 
 .project-details img {
-    cursor: pointer;
     width: 100%;
     max-width: 1400px;
     margin: 20px 0;
@@ -504,6 +475,25 @@ nav.nav-list .logo {
     width: 50%;
     display: inline-block;
     vertical-align: top;
+}
+
+.slideshow-container {
+    margin: 30px 0;
+}
+
+.slideshow-container .thumbnail-container {
+    text-align: center;
+}
+
+.slideshow-container .thumbnail-container img {
+    width: 150px;
+    margin: 0;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.slideshow-container .thumbnail-container img:last-child {
+    margin-right: 0;
 }
 
 .about {

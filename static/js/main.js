@@ -2,7 +2,7 @@
  * For amyjlee.com
  */
 
-'use strict';
+"use strict";
 
 (function($, Router, Handlebars, Siema) {
 
@@ -10,81 +10,81 @@
   // https://gist.github.com/mathewbyrne/1280286
   var slugify = function(text) {
     return text.toString().toLowerCase()
-      .replace(/\s+/g, '-')           // Replace spaces with -
-      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-      .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-      .replace(/^-+/, '')             // Trim - from start of text
-      .replace(/-+$/, '');            // Trim - from end of text
+      .replace(/\s+/g, "-")           // Replace spaces with -
+      .replace(/[^\w\-]+/g, "")       // Remove all non-word chars
+      .replace(/\-\-+/g, "-")         // Replace multiple - with single -
+      .replace(/^-+/, "")             // Trim - from start of text
+      .replace(/-+$/, "");            // Trim - from end of text
   };
 
   // List of projects
   var projects = [
     {
-      title         : 'Care Plans - Authoring',
-      thumbnail     : '/static/img/thumbnails/authoring.png',
-      projectType   : 'End-to-end product design',
-      year          : '2017',
+      title         : "Care Plans - Authoring",
+      thumbnail     : "/static/img/thumbnails/authoring.png",
+      projectType   : "End-to-end product design",
+      year          : "2017",
       projectDetail : Handlebars.templates.authoring()
     },
     {
-      title         : 'Care Plans - Management',
-      thumbnail     : '/static/img/thumbnails/mgmt.png',
-      projectType   : 'End-to-end product design',
-      year          : '2017',
+      title         : "Care Plans - Management",
+      thumbnail     : "/static/img/thumbnails/mgmt.png",
+      projectType   : "End-to-end product design",
+      year          : "2017",
       projectDetail : Handlebars.templates.management()
     },
     {
-      title         : 'Ask Docs',
-      thumbnail     : '/static/img/thumbnails/askdocs.png',
-      mainImage     : '/static/img/projects/askdocs/shell.png',
-      projectType   : 'End-to-end product design',
-      year          : '2016',
+      title         : "Ask Docs",
+      thumbnail     : "/static/img/thumbnails/askdocs.png",
+      mainImage     : "/static/img/projects/askdocs/shell.png",
+      projectType   : "End-to-end product design",
+      year          : "2016",
       projectDetail : Handlebars.templates.askDocs()
     },
     {
-      title         : 'Budget App',
-      mainImage     : '/static/img/projects/budget/main.png',
-      thumbnail     : '/static/img/thumbnails/budget.png',
-      projectType   : 'Conceptual mobile app design',
-      year          : '2016',
+      title         : "Budget App",
+      mainImage     : "/static/img/projects/budget/main.png",
+      thumbnail     : "/static/img/thumbnails/budget.png",
+      projectType   : "Conceptual mobile app design",
+      year          : "2016",
       projectDetail : Handlebars.templates.budget()
     },
     {
-      title         : 'Rethinking CaltrainMe',
-      thumbnail     : '/static/img/thumbnails/caltrain.png',
-      mainImage     : '/static/img/projects/caltrainme/caltrainme_main.jpg',
-      projectType   : 'Conceptual mobile app redesign',
-      year          : '2015',
+      title         : "Rethinking CaltrainMe",
+      thumbnail     : "/static/img/thumbnails/caltrain.png",
+      mainImage     : "/static/img/projects/caltrainme/caltrainme_main.jpg",
+      projectType   : "Conceptual mobile app redesign",
+      year          : "2015",
       projectDetail : Handlebars.templates.caltrainMe()
     },
     {
-      title         : 'Chrome Download Redesign',
-      thumbnail     : '/static/img/projects/chromedl/thumbnail-07.png',
-      mainImage     : '/static/img/projects/chromedl/chrome.gif',
-      projectType   : 'Conceptual web app study',
-      year          : '2015',
+      title         : "Chrome Download Redesign",
+      thumbnail     : "/static/img/projects/chromedl/thumbnail-07.png",
+      mainImage     : "/static/img/projects/chromedl/chrome.gif",
+      projectType   : "Conceptual web app study",
+      year          : "2015",
       projectDetail : Handlebars.templates.chromedownload()
     },
     {
-      title         : 'Japan Trip Icon Alphabet Book',
-      thumbnail     : '/static/img/thumbnails/abc.png',
-      projectType   : 'Icons',
-      year          : '2015',
+      title         : "Japan Trip Icon Alphabet Book",
+      thumbnail     : "/static/img/thumbnails/abc.png",
+      projectType   : "Icons",
+      year          : "2015",
       projectDetail : Handlebars.templates.japanIcons()
     }
   ];
 
   var getPath = function(id) {
-    return '/projects/' + id + '/' + slugify(projects[id].title);
+    return "/projects/" + id + "/" + slugify(projects[id].title);
   };
 
   // Cache commonly used jquery objects
-  var $projectList   = $('.project-list');
-  var $projectDetail = $('.project-detail');
-  var $projectDetailSection = $('.project-detail-section');
+  var $projectList   = $(".project-list");
+  var $projectDetail = $(".project-detail");
+  var $projectDetailSection = $(".project-detail-section");
 
   // siema
-  var siema;
+  // var siema;
 
   // Set and store project items
   var projectItems = [];
@@ -110,7 +110,7 @@
 
   // bind clicks to load detail view
   var handleDetailViewClick = function(event) {
-    var id = parseInt($(event.target).closest('li').attr('data-id'), 10);
+    var id = parseInt($(event.target).closest("li").attr("data-id"), 10);
     if (window.location.pathname !== getPath(id)) {
       router.setRoute(getPath(id));
       window.scroll(0, 0);
@@ -119,145 +119,205 @@
     event.preventDefault();
   };
 
-  $('.projects-link').click(function(event) {
-    if (window.location.pathname !== '/projects') {
-      router.setRoute('/projects');
+  $(".projects-link").click(function(event) {
+    if (window.location.pathname !== "/projects") {
+      router.setRoute("/projects");
     }
     event.preventDefault();
     event.stopPropagation();
   });
 
-  $projectList.on('click', '.project-thumbnail', handleDetailViewClick);
-  $projectList.on('click', '.project-item-heading', handleDetailViewClick);
-  $projectList.on('click', '.project-item-title', handleDetailViewClick);
+  $projectList.on("click", ".project-thumbnail", handleDetailViewClick);
+  $projectList.on("click", ".project-item-heading", handleDetailViewClick);
+  $projectList.on("click", ".project-item-title", handleDetailViewClick);
 
-  var slideshow = document.createElement('div');
-  slideshow.className = 'slideshow';
-  document.body.appendChild(slideshow);
+  // var slideshow = document.createElement("div");
+  // slideshow.className = "slideshow";
+  // document.body.appendChild(slideshow);
 
-  function closeSiema() {
-    if (siema != null) {
-      siema.destroy();
-      siema = undefined;
+  // function closeSiema() {
+  //   if (siema != null) {
+  //     siema.destroy();
+  //     siema = undefined;
+  //   }
+
+  //   // document.body.style.overflow = "auto";
+  //   slideshow.style.display = "none";
+
+  //   while (slideshow.firstChild != null) {
+  //     slideshow.removeChild(slideshow.firstChild);
+  //   }
+  // }
+
+  // function openSiema(event) {
+  //   closeSiema();
+
+  //   var imgs = getImgsInProjectDetail();
+  //   var imgsCount = imgs.length;
+  //   for (var i = 0; i < imgsCount; i++) {
+  //     var img = imgs[i];
+  //     img.setAttribute("data-siema-index", i);
+
+  //     var container = document.createElement("div");
+  //     container.className = "slideshow-entry-container";
+
+  //     var newImg = document.createElement("img");
+  //     newImg.src = img.getAttribute("src");
+
+  //     var caption = document.createElement("div");
+  //     caption.className = "slideshow-entry-caption";
+  //     caption.textContent = img.alt || ";
+
+  //     container.appendChild(newImg);
+  //     container.appendChild(caption);
+
+  //     slideshow.appendChild(container);
+  //   }
+
+  //   document.body.style.overflow = "hidden";
+  //   slideshow.style.display = "block";
+  //   siema = new Siema({
+  //     selector: ".slideshow",
+  //     startIndex: parseInt(event.currentTarget.getAttribute("data-siema-index"), 10)
+  //   });
+  // }
+
+  // function siemaKeyboardInteractions(event) {
+  //   switch (event.key) {
+  //     case "ArrowLeft":
+  //       if (siema != null) {
+  //         siema.prev();
+  //       }
+  //       break;
+  //     case "ArrowRight":
+  //       if (siema != null) {
+  //         siema.next();
+  //       }
+  //       break;
+  //     case "Escape":
+  //       closeSiema();
+  //       break;
+  //     default:
+  //       // noop
+  //   }
+  // }
+
+  // function getImgsInProjectDetail() {
+  //   var projectDetails = document.getElementsByClassName("project-details")[0];
+  //   if (projectDetails == null) {
+  //     return [];
+  //   } else {
+  //   return projectDetails.getElementsByTagName("img");
+  //   }
+  // }
+
+  // function unbindProjectDetailImagesWithSiema() {
+  //   var imgs = getImgsInProjectDetail();
+  //   var imgsCount = imgs.length;
+  //   for (var i = 0; i < imgsCount; i++) {
+  //     imgs[i].removeEventListener("click", openSiema);
+  //   }
+
+  //   document.removeEventListener("keyup", siemaKeyboardInteractions)
+  // }
+
+  // function bindProjectDetailImagesWithSiema() {
+  //   var imgs = getImgsInProjectDetail();
+  //   var imgsCount = imgs.length;
+  //   for (var i = 0; i < imgsCount; i++) {
+  //     imgs[i].addEventListener("click", openSiema);
+  //   }
+
+  //   document.addEventListener("keyup", siemaKeyboardInteractions)
+  // }
+
+  var siemas = [];
+
+  function createSlideshows() {
+    for (var i = 0; i < siemas.length; i++) {
+      siemas[i].destory();
     }
+    siemas = [];
 
-    // document.body.style.overflow = 'auto';
-    slideshow.style.display = 'none';
+    var slideshowContainers = document.getElementsByClassName("slideshow-container");
 
-    while (slideshow.firstChild != null) {
-      slideshow.removeChild(slideshow.firstChild);
-    }
-  }
+    for (var i = 0; i < slideshowContainers.length; i++) {
+      var container = slideshowContainers[i];
+      var images = container.getElementsByTagName("img");
 
-  function openSiema(event) {
-    closeSiema();
+      var thumbnailContainer = document.createElement("div");
+      thumbnailContainer.className = "thumbnail-container";
 
-    var imgs = getImgsInProjectDetail();
-    var imgsCount = imgs.length;
-    for (var i = 0; i < imgsCount; i++) {
-      var img = imgs[i];
-      img.setAttribute('data-siema-index', i);
+      var slideshowClassName = "slideshow-" + i;
+      var slideshow = document.createElement("div");
+      slideshow.className = slideshowClassName;
 
-      var container = document.createElement('div');
-      container.className = 'slideshow-entry-container';
+      var numImages = images.length;
+      var thumbnailImages = [];
 
-      var newImg = document.createElement('img');
-      newImg.src = img.getAttribute('src');
+      for (var j = 0; j < numImages; j++) {
+        var image = images[j];
 
-      var caption = document.createElement('div');
-      caption.className = 'slideshow-entry-caption';
-      caption.textContent = img.alt || '';
+        var thumbnail = document.createElement("img");
+        thumbnail.src = image.src;
+        thumbnailContainer.appendChild(thumbnail);
+        thumbnailImages.push(thumbnail);
 
-      container.appendChild(newImg);
-      container.appendChild(caption);
+        var slideshowImage = document.createElement("img");
+        slideshowImage.src = image.src;
+        slideshow.appendChild(slideshowImage);
+      }
 
-      slideshow.appendChild(container);
-    }
+      for (var j = 0; j < numImages; j++) {
+        container.removeChild(images[0]);
+      }
 
-    document.body.style.overflow = 'hidden';
-    slideshow.style.display = 'block';
-    siema = new Siema({
-      selector: '.slideshow',
-      startIndex: parseInt(event.currentTarget.getAttribute("data-siema-index"), 10)
-    });
-  }
+      container.appendChild(slideshow);
+      container.appendChild(thumbnailContainer);
 
-  function siemaKeyboardInteractions(event) {
-    switch (event.key) {
-      case "ArrowLeft":
-        if (siema != null) {
-          siema.prev();
+      var s = new Siema({ selector: "." + slideshowClassName });
+      siemas.push(s);
+
+      var createSiemaGoTo = function(siema, index) {
+        return function() {
+          siema.goTo(index);
         }
-        break;
-      case "ArrowRight":
-        if (siema != null) {
-          siema.next();
-        }
-        break;
-      case "Escape":
-        closeSiema();
-        break;
-      default:
-        // noop
+      };
+
+      for (var j = 0; j < thumbnailImages.length; j++) {
+        thumbnailImages[j].addEventListener("click", createSiemaGoTo(s, j));
+      }
     }
-  }
-
-  function getImgsInProjectDetail() {
-    var projectDetails = document.getElementsByClassName('project-details')[0];
-    if (projectDetails == null) {
-      return [];
-    } else {
-    return projectDetails.getElementsByTagName('img');
-    }
-  }
-
-  function unbindProjectDetailImagesWithSiema() {
-    var imgs = getImgsInProjectDetail();
-    var imgsCount = imgs.length;
-    for (var i = 0; i < imgsCount; i++) {
-      imgs[i].removeEventListener('click', openSiema);
-    }
-
-    document.removeEventListener('keyup', siemaKeyboardInteractions)
-  }
-
-  function bindProjectDetailImagesWithSiema() {
-    var imgs = getImgsInProjectDetail();
-    var imgsCount = imgs.length;
-    for (var i = 0; i < imgsCount; i++) {
-      imgs[i].addEventListener('click', openSiema);
-    }
-
-    document.addEventListener('keyup', siemaKeyboardInteractions)
   }
 
   // views
   var landingView = function() {
     $projectDetailSection.hide();
     $projectList.show();
-    $projectDetail.html('');
-    closeSiema();
-    $('.project-item').css('opacity', 0).each(function(index) {
+    $projectDetail.html("");
+    // closeSiema();
+    $(".project-item").css("opacity", 0).each(function(index) {
       $(this).delay((index - 1) * 100).fadeTo(250, 1);
     });
-    document.title = 'Amy J Lee';
+    document.title = "Amy J Lee";
   };
 
   var detailView = function(projectId) {
-    unbindProjectDetailImagesWithSiema();
+    // unbindProjectDetailImagesWithSiema();
 
     var project = projects[projectId];
     $projectDetail.html(Handlebars.templates.projectDetail(project));
     $projectDetailSection.show();
     $projectList.show();
 
-    bindProjectDetailImagesWithSiema();
+    createSlideshows();
+
     document.title = project.title;
   };
 
   var router = Router({
-    '/projects': landingView,
-    '/projects/:projectId/:projectSlug': detailView
+    "/projects": landingView,
+    "/projects/:projectId/:projectSlug": detailView
   });
   router.configure({ html5history: true });
   router.init();
