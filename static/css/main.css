@@ -481,12 +481,17 @@ nav.nav-list .logo {
     margin: 30px 0;
 }
 
+.slideshow-container figcaption {
+    margin-bottom: 20px;
+}
+
 .slideshow-container .thumbnail-container {
     text-align: center;
 }
 
 .slideshow-container .thumbnail-container img {
-    width: 150px;
+    width: auto;
+    height: 65px;
     margin: 0;
     margin-right: 5px;
     cursor: pointer;

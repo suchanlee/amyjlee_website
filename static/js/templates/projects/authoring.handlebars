@@ -1,146 +1,134 @@
-<p>
-  HealthTap partnered with a global healthcare organization to create a holistic, interactive system between the care provider and patients. Care plans is a method for doctors to help patients stay healthy after they leave their office by keeping track of things like prescribed medicine intake and interjecting if patients fall of rails. Interjections can be as simple as a reminder to take medication. Or it can be as complex and multi-faceted as a guideline for diabetic patients to follow based on their blood glucose readings.
-</p>
+<h2>TL;DR</h2>
 
-<h2>Problem</h2>
-<p>
-  In order to provide continuous care, doctors need a tool to create this care journey. This tool needs to provide a set of actionable items for patients to follow and a set of rules that define what actions to follow. This is the <b>authoring</b> part of care plans.
-</p>
-<p><a href="">[Click here for the management side of care plans]</a></p>
+<h4>Goal</h4>
+<p>To create a tool for doctors to author holistic and interactive Care Plans.</p>
 
-<img src="/static/img/projects/authoring/example-careplan.png" alt="Example of an authored care plan">
-<figcaption>Example of an authored care plan</figcaption>
+<h4>What is a Care Plan?</h4>
+<ul>
+  <li>A Care Plan is a guide design by a medical provider to help a patient manage his or her condition</li>
+  <li>Provides preventative measures, such as medication, measurement, and/or appointment reminders</li>
+  <li>Can also provide reactive measures, such as an alerting system for an emergency</li>
+</ul>
 
-<h2>Vision</h2>
-<p>In order to build a proactive health care, I wanted to design a set of tools that was</p>
+<h4>Challenges</h4>
+<ul>
+  <li>A very wide project scope. Can easily spiral out of control, duct taping features left and right</li>
+  <li>Research in user needs and workflow is crucial</li>
+</ul>
 
-<p><b>Intuitive</b></p>
-<p>
-  Current EMR, EHR, and PHR are very heavy and clunky. None of them really speak to each other. Hence, there is a huge gap in the workflow at hospitals and clinics.
-</p>
+<h4>Scoping</h4>
+<ul>
+  <li>Restricted the project to focus on a few selected conditions and targed a small group of patients already enrolled in Care Plans</li>
+  <li>Defined the language of Care Plans</li>
+  <li>Shifted from a highly technical and complex solution to a deliberately simple one</li>
+</ul>
 
-<p><b>Holistic</b></p>
-<p>
-  Current EMR, EHR, and PHR are very heavy and clunky. None of them really speak to each other. Hence, there is a huge gap in the workflow at hospitals and clinics. There is no single system has all the functionalities together.
-</p>
+<h4>Final Design ✨</h4>
 
-<p><b>Consolidated</b></p>
+<h2>What is a Care Plan? And Why Do We Need It?</h2>
 
-<h2>Role</h2>
-<p>
-  I worked closely with a product manager in the early stages to create a compelling design solution for our enterprise partner. We outlined all the different attributes for actions, triggers, and interventions. I focused more on web/desktop design framework as this was going to be mainly part of an enterprise admin tool solution initially. Design consisted of early wireframes that were shared with stakeholders, various iterations for internal reviews, and final design prototypes and assets for the partner and our engineering team.
-</p>
+<p>Patients' interactions with doctors are short, sparse, and often reactive. As a result, doctors don't have enough information to provide holistic care. HealthTap partnered with a global health care provider to tackle this problem together.</p>
 
-<h2>Research</h2>
-<p>
-  We asked our doctors to create general Care Plans for these 4 conditions: Pregnancy, HIV, Diabetes Type II, and Hypertension. We didn’t ask them what features or functions they’d like to see. We first gathered raw data and identified the shared and distinguished characteristics of each condition. Then, we created a spec document that listed all the product and feature requirements. This document was then shared with the doctor group to make sure this covers their use cases. We went through multiple iterations and this process helped tremendously in solidifying the product and everyone’s understanding of the product vision.
-</p>
+<p>A Care Plan is a guide designed by a medical provider for a patient to help that patient manage his or her condition. It can provide preventative measures, such as medication, measurements, and/or appointment reminders. It can also provide reactive measures, such as an alerting system for an emergency.</p>
+
+<img src="/static/img/projects/authoring/sketch-0.png" alt="Initial workflow sketches">
+<figcaption>Initial workflow sketches</figcaption>
+
+<h2>Challenges</h2>
+
+<p>One of the things I quickly learned in the project was how complex a Care Plan can be. On one end, there are things like "5 steps to combat sunburn". One the other, it could be treating a 65 year old woman with hypertension and cancer history, treating type 2 diabetes.</p>
+
+<p>In order to keep the project within reasonable scope, we decided to focus on a small set of medical conditions for the beta launch. We would receive feedback from the beta and iteratively add support more conditions.</p>
+
+<h2>Scoping</h2>
+
+<p>We focused on just 4 medical conditions:</p>
+<ul>
+  <li>Pregnancy</li>
+  <li>HIV</li>
+  <li>Type 2 diabetes</li>
+  <li>Hypertention</li>
+</ul>
+
+<p>We also worked with a <b>small group of patients</b> part of a similar medical program with our partner care provider who were able to provide quick feedback. In addition to receiving feedback from the users, we collaborated closely with experts in our doctor network.</p>
 
 <h2>Discovery</h2>
-<p>Here is what we learned from our research and iterative feedback process.</p>
-<p>
-  Care Plans basically have 2 components: actions and triggers. Actions define “what” patient needs to do. Triggers define “when” patient does the actions. An example can be: patient must schedule a visit with their primary care provider (what) a month after they enroll in the care plan (when). Or patient must schedule a visit with a Podiatrist (what) when they experience their feet swelling(when). Triggers can be time-based or event-based.
-</p>
 
-<img src="/static/img/projects/authoring/components.png" alt="Care plan decomposition">
-<figcaption>Care plan decomposition</figcaption>
+<h4>Care Plan language</h4>
+<p>Care Plans have 2 components:</p>
+<ul>
+  <li><b>Trigger</b> - defines "when" a patient need to take action(s)</li>
+  <li><b>Action</b> - defines "what" a patient needs to do</li>
+</ul>
 
-<p>
-  These actions and triggers can have endless number of types. Yet, we wanted to focus on a small set of necessities first. Our goal wasn’t to conquer all fields of medicine; our goal was to focus on a small number of conditions first, strengthen that, and expand from there. Hence, we limited the number of action and trigger types. We also learned that there is no such “onesize-fits-all” model when it comes to Care Plans. Each plan must be modified per patient’s health records. For example, ways to manage type II diabetes are very, very different for a man in his 60s and a pregnant mom in her 30s.
-</p>
+<p>Triggers can be <b>time</b> or <b>event</b> based.</p>
+<p>Time-based example:<br>
+[WHEN] A month after enrolling in the Care Plan,<br>
+[WHAT] The patient must schedule a visit with their primary care provider.</p>
+<p>Event-based example:<br>
+[WHEN] In the case of feet swelling<br>
+[WHAT] The patient must schedule a visit with a Podiatrist.</p>
 
-<img src="/static/img/projects/authoring/discovery.png" alt="Findings from our iterations with doctors">
-<figcaption>Findings from our iterations with doctors</figcaption>
+<img src="/static/img/projects/authoring/components.png" alt="Care Plan components">
+<figcaption>Care Plan components</figcaption>
+
+<h4>The backbone</h4>
+
+<p>Since we decided to keep the product simple for now, with the help of our doctor network we identified a list of the most crucial action and trigger types.</p>
+
+<img src="/static/img/projects/authoring/restrictions.png" alt="List of the most crucial action and trigger types">
+<figcaption>List of the most crucial action and trigger types</figcaption>
+
+<h2>A bit of detour...</h2>
+
+<p>Although we wanted to design and build the product with the requirements, specification, and feedback of the product's users, some stakeholders of the project came into the project with a few concepts already in mind. So we initially explored some of their ideas:</p>
+
+<div class="slideshow-container">
+  <img src="/static/img/projects/authoring/iteration1-a.png">
+  <img src="/static/img/projects/authoring/iteration1-b.png">
+  <figcaption>Wireframes from exploring stakeholders' ideas</figcaption>
+</div>
+
+<p>These ideas that were proposed by the stakeholders had no visualization of how the actions and triggers were laid out. And it was complex. The screens below were the attributes defined for this version:</p>
+
+<div class="slideshow-container">
+  <img src="/static/img/projects/authoring/iteration2-b.png">
+  <img src="/static/img/projects/authoring/iteration2-a.png">
+</div>
+
+<p>Fortunately, the stakeholders understood that this was different from what the actual users (the doctors) needed. So I was able to start designing with research and user feedback.</p>
 
 <h2>Design Process</h2>
 
-<p>Here are the key decisions we made to keep the product simple and user-friendly:</p>
+<div class="slideshow-container">
+  <img src="/static/img/projects/authoring/sketch-01.png">
+  <img src="/static/img/projects/authoring/sketch-02.png">
+  <figcaption>Sketches and notes</figcaption>
+</div>
 
-<p><b>Limit the number of action types to reduce complexity</b></p>
-<p>We finalized on the following 5 actions types: medication, general todo, appointment, measurement, and alert.</p>
+<p>One of the first things I learned as I started was to assume little and to ask a lot. My assumption in the targeted user group was wrong. When I interviewed the actual user group, they provided lots of information that directly affected the design. For example, because of the tight and hectic schedules of doctors and the software they were already used to, they preferred UI elements to be bigger, bolder, and <b>more obvious</b>. They loved color-coding and highlighted clickable areas. They wanted the software to just work, and not be another tool they have to <i>learn</i>.</p>
 
-<p><b>2 types of care plans, wellness and condition-based</b></p>
-<ul>
-  <li>Both types are created by doctors.</li>
-  <li>While wellness plans can be self-enrolled by patients, condition-based ones can only be assigned by a doctor</li>
-</ul>
+<div class="slideshow-container">
+  <img src="/static/img/projects/authoring/iteration3-a.png">
+  <img src="/static/img/projects/authoring/iteration3-b.png">
+  <figcaption>First iterations. Not obvious enough.</figcaption>
+</div>
 
-<p><b>Condition-based Care Plans will have at least one key metric to track</b></p>
-<p>i.e. fasting blood glucose level for diabetes</p>
+<h2>Final Design ✨</h2>
 
-<p><b>Doctors will always be supplied with a generic template to start with, never from a complete scratch</b></p>
-<p>
-  While we strongly believe in diversifying the content, we believed that it was a bit early to have everything depend on the author. The author can always remove and create their own content but we believed it’d be great to start with some baseline template so that it’s not overwhelming or time-consuming
-</p>
+<h4>Creating a new Care Plan and adding an action</h4>
+<div class="slideshow-container">
+  <img src="/static/img/projects/authoring/FINAL1-a.png">
+  <img src="/static/img/projects/authoring/FINAL1-b.png">
+  <img src="/static/img/projects/authoring/FINAL1-c.png">
+</div>
 
-<h3>Iterations</h3>
-
-<p>
-  Although we had a list of requirements and specificiations outlined with potential users, there were a few concepts specifically requested by the stakeholders. Hence, inital wireframes were very far from the vision and goals I had set up originally.
-</p>
-
-<img src="/static/img/projects/authoring/iteration1-a.png" alt="First iteration mocks for navigating and creating care plans">
-<img src="/static/img/projects/authoring/iteration1-b.png" alt="First iteration mocks for navigating and creating care plans">
-<figcaption>First iteration mocks for navigating and creating care plans</figcaption>
-
-<img src="/static/img/projects/authoring/iteration2-a.png" alt="First iteration mocks for forms">
-<img src="/static/img/projects/authoring/iteration2-b.png" alt="First iteration mocks for forms">
-<figcaption>First iteration mocks for forms</figcaption>
-
-<p>
-  As shown above, initial draft had no real visualization of how the actions and triggers were laid out. It also was very complex. There were a lot of trigger types and numerous steps that were unnecessary for the beta release.
-</p>
-
-<p>
-  I was personally very dissappointed with this direction. Fortunately, the stakeholders also saw that this was quite different from the initial conversations and understood that this was different from what the actual users (the doctors) needed. So I went back and did another set of iterations.
-</p>
-
-<img src="/static/img/projects/authoring/iteration3-a.png" alt="Mocks from the third iteration">
-<img src="/static/img/projects/authoring/iteration3-b.png" alt="Mocks from the third iteration">
-<figcaption>Mocks from the second iteration</figcaption>
-
-<p>
-  After the new direction was signed off, I worked closely with our team and the doctors to crystalize the design. I also learned that the user group I’m targeting is very different from what I assuemd. Because doctors work in such tight schedule and are used to the clunky, slow softwares, they preferred things to be bigger, bolder, and more obvious. For instance, they always preferred color-coding and highlighting clickable areas.
-</p>
-
-
-<h2>Final Design</h2>
-<p>
-  The most important part of the final design was the visualization of the Care Plan. Essentially, Care Plan is a personalized and guided map for a patient’s journey in combating or managing a condition. It was important for the author to understand how the actions and triggers are connected; “X” behavior of a patient will trigger “Y” actions.
-</p>
-
-<img src="/static/img/projects/authoring/01.png" alt="Care plans list page">
-<figcaption>Care plans list page. Doctors can view care plans, create new, and edit existing ones</figcaption>
-
-<img src="/static/img/projects/authoring/02.png" alt="Creating a new care plan">
-<img src="/static/img/projects/authoring/03.png" alt="Creating a new care plan">
-<figcaption>Creating a new care plan</figcaption>
-
-<img src="/static/img/projects/authoring/04.png" alt="Loading the create new page. It displays a skeleton of what a care plan can look like.">
-<figcaption>Loading the create new page. It displays a skeleton of what a care plan can look like.</figcaption>
-
-<img src="/static/img/projects/authoring/05.png" alt="Loaded created care plan page. It instructs the user to take action.">
-<figcaption>Loaded created care plan page. It instructs the user to take action.</figcaption>
-
-<img src="/static/img/projects/authoring/06.png" alt="Workflow: add action type">
-<img src="/static/img/projects/authoring/07.png" alt="Workflow: add action type">
-<img src="/static/img/projects/authoring/08.png" alt="Workflow: add action type">
-<figcaption>Workflow: add action type</figcaption>
-
-<img src="/static/img/projects/authoring/09.png" alt="Workflow: add trigger to action">
-<img src="/static/img/projects/authoring/10.png" alt="Workflow: add trigger to action">
-<img src="/static/img/projects/authoring/11.png" alt="Workflow: add trigger to action">
-<img src="/static/img/projects/authoring/12.png" alt="Workflow: add trigger to action">
-<figcaption>Workflow: add trigger to action</figcaption>
-
-<img src="/static/img/projects/authoring/13.png" alt="Use the minimap to get a birds-eye view of the plan and to quickly navigate">
-<figcaption>Use the minimap to get a birds-eye view of the plan and to quickly navigate</figcaption>
-
-<img src="/static/img/projects/authoring/15.png" alt="Care plan view page">
-<figcaption>Care plan view page</figcaption>
+<h4>Adding a trigger and developing it further</h4>
+<div class="slideshow-container">
+  <img src="/static/img/projects/authoring/FINAL2-a.png">
+  <img src="/static/img/projects/authoring/FINAL2-b.png">
+  <img src="/static/img/projects/authoring/FINAL2-c.png">
+</div>
 
 <h2>Next Steps</h2>
-<p>
-There still are a number of features and enhancements the tool needs. Because majority of the partner’s and our doctors use desktop computer in their offices, we decided to keep this web and desktop based tool. It’d be great to add desktop-specific features, such as keyboard shortcuts. On the other hand, this Authoring Tool should be accessible anywhere. Although, it may be difficult to create a plan on a mobile device, it should still be supported via mobile and tablet app.
-</p>
-
+<p>There are still a number of features and enhancements the tool needs. Most importantly, we need to support more medical conditions. And one of the most requested features was adding keyboard shortcuts to make managing Care Plans more efficient.</p>

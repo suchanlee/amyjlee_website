@@ -131,111 +131,11 @@
   $projectList.on("click", ".project-item-heading", handleDetailViewClick);
   $projectList.on("click", ".project-item-title", handleDetailViewClick);
 
-  // var slideshow = document.createElement("div");
-  // slideshow.className = "slideshow";
-  // document.body.appendChild(slideshow);
-
-  // function closeSiema() {
-  //   if (siema != null) {
-  //     siema.destroy();
-  //     siema = undefined;
-  //   }
-
-  //   // document.body.style.overflow = "auto";
-  //   slideshow.style.display = "none";
-
-  //   while (slideshow.firstChild != null) {
-  //     slideshow.removeChild(slideshow.firstChild);
-  //   }
-  // }
-
-  // function openSiema(event) {
-  //   closeSiema();
-
-  //   var imgs = getImgsInProjectDetail();
-  //   var imgsCount = imgs.length;
-  //   for (var i = 0; i < imgsCount; i++) {
-  //     var img = imgs[i];
-  //     img.setAttribute("data-siema-index", i);
-
-  //     var container = document.createElement("div");
-  //     container.className = "slideshow-entry-container";
-
-  //     var newImg = document.createElement("img");
-  //     newImg.src = img.getAttribute("src");
-
-  //     var caption = document.createElement("div");
-  //     caption.className = "slideshow-entry-caption";
-  //     caption.textContent = img.alt || ";
-
-  //     container.appendChild(newImg);
-  //     container.appendChild(caption);
-
-  //     slideshow.appendChild(container);
-  //   }
-
-  //   document.body.style.overflow = "hidden";
-  //   slideshow.style.display = "block";
-  //   siema = new Siema({
-  //     selector: ".slideshow",
-  //     startIndex: parseInt(event.currentTarget.getAttribute("data-siema-index"), 10)
-  //   });
-  // }
-
-  // function siemaKeyboardInteractions(event) {
-  //   switch (event.key) {
-  //     case "ArrowLeft":
-  //       if (siema != null) {
-  //         siema.prev();
-  //       }
-  //       break;
-  //     case "ArrowRight":
-  //       if (siema != null) {
-  //         siema.next();
-  //       }
-  //       break;
-  //     case "Escape":
-  //       closeSiema();
-  //       break;
-  //     default:
-  //       // noop
-  //   }
-  // }
-
-  // function getImgsInProjectDetail() {
-  //   var projectDetails = document.getElementsByClassName("project-details")[0];
-  //   if (projectDetails == null) {
-  //     return [];
-  //   } else {
-  //   return projectDetails.getElementsByTagName("img");
-  //   }
-  // }
-
-  // function unbindProjectDetailImagesWithSiema() {
-  //   var imgs = getImgsInProjectDetail();
-  //   var imgsCount = imgs.length;
-  //   for (var i = 0; i < imgsCount; i++) {
-  //     imgs[i].removeEventListener("click", openSiema);
-  //   }
-
-  //   document.removeEventListener("keyup", siemaKeyboardInteractions)
-  // }
-
-  // function bindProjectDetailImagesWithSiema() {
-  //   var imgs = getImgsInProjectDetail();
-  //   var imgsCount = imgs.length;
-  //   for (var i = 0; i < imgsCount; i++) {
-  //     imgs[i].addEventListener("click", openSiema);
-  //   }
-
-  //   document.addEventListener("keyup", siemaKeyboardInteractions)
-  // }
-
   var siemas = [];
 
   function createSlideshows() {
     for (var i = 0; i < siemas.length; i++) {
-      siemas[i].destory();
+      siemas[i].destroy();
     }
     siemas = [];
 
@@ -273,6 +173,13 @@
       }
 
       container.appendChild(slideshow);
+
+      var figcaption = container.getElementsByTagName("figcaption")[0];
+      if (figcaption != null) {
+        container.removeChild(figcaption);
+        container.appendChild(figcaption);
+      }
+
       container.appendChild(thumbnailContainer);
 
       var s = new Siema({ selector: "." + slideshowClassName });
