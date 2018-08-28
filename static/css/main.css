@@ -495,10 +495,20 @@ nav.nav-list .logo {
     margin: 0;
     margin-right: 5px;
     cursor: pointer;
+    opacity: 0.5;
+}
+
+.slideshow-container .thumbnail-container img:hover {
+    opacity: 1;
 }
 
 .slideshow-container .thumbnail-container img:last-child {
     margin-right: 0;
+}
+
+.slideshow-container .thumbnail-container img.-active {
+    box-shadow: 0 0 0 1px #ddd;
+    opacity: 1;
 }
 
 .about {

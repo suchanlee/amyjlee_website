@@ -160,6 +160,12 @@
 
         var thumbnail = document.createElement("img");
         thumbnail.src = image.src;
+        thumbnail.className = "slideshow-thumbnail";
+
+        if (j === 0) {
+          thumbnail.classList.add("-active");
+        }
+
         thumbnailContainer.appendChild(thumbnail);
         thumbnailImages.push(thumbnail);
 
@@ -182,14 +188,29 @@
 
       container.appendChild(thumbnailContainer);
 
-      var s = new Siema({ selector: "." + slideshowClassName });
-      siemas.push(s);
+      var createOnChangeHandler = function(thumbnails) {
+        return function() {
+          for (var k = 0; k < thumbnails.length; k++) {
+            thumbnails[k].classList.remove("-active");
+            if (k === this.currentSlide) {
+              thumbnails[k].classList.add("-active");
+            }
+          }
+        }
+      }
 
       var createSiemaGoTo = function(siema, index) {
         return function() {
           siema.goTo(index);
         }
       };
+
+      var s = new Siema({
+        selector: "." + slideshowClassName,
+        onChange: createOnChangeHandler(thumbnailImages)
+      });
+
+      siemas.push(s);
 
       for (var j = 0; j < thumbnailImages.length; j++) {
         thumbnailImages[j].addEventListener("click", createSiemaGoTo(s, j));
