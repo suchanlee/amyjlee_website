@@ -20,18 +20,18 @@
   // List of projects
   var projects = [
     {
-      title         : "Care Plans - Authoring",
-      thumbnail     : "/static/img/thumbnails/authoring.png",
-      projectType   : "End-to-end product design",
-      year          : "2017",
-      projectDetail : Handlebars.templates.authoring()
-    },
-    {
       title         : "Care Plans - Management",
       thumbnail     : "/static/img/thumbnails/mgmt.png",
       projectType   : "End-to-end product design",
       year          : "2017",
       projectDetail : Handlebars.templates.management()
+    },
+    {
+      title         : "Care Plans - Authoring",
+      thumbnail     : "/static/img/thumbnails/authoring.png",
+      projectType   : "End-to-end product design",
+      year          : "2017",
+      projectDetail : Handlebars.templates.authoring()
     },
     {
       title         : "Ask Docs",
