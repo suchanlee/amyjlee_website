@@ -113,8 +113,9 @@
     var id = parseInt($(event.target).closest("li").attr("data-id"), 10);
     if (window.location.pathname !== getPath(id)) {
       router.setRoute(getPath(id));
-      window.scroll(0, 0);
     }
+    window.scroll(0, 0);
+
     event.stopPropagation();
     event.preventDefault();
   };
