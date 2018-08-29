@@ -24,14 +24,16 @@
       thumbnail     : "/static/img/thumbnails/mgmt.png",
       projectType   : "End-to-end product design",
       year          : "2017",
-      projectDetail : Handlebars.templates.management()
+      projectDetail : Handlebars.templates.management(),
+      isCaseStudy   : true
     },
     {
       title         : "Care Plans - Authoring",
       thumbnail     : "/static/img/thumbnails/authoring.png",
       projectType   : "End-to-end product design",
       year          : "2017",
-      projectDetail : Handlebars.templates.authoring()
+      projectDetail : Handlebars.templates.authoring(),
+      isCaseStudy   : true
     },
     {
       title         : "Ask Docs",
@@ -39,7 +41,8 @@
       mainImage     : "/static/img/projects/askdocs/shell.png",
       projectType   : "End-to-end product design",
       year          : "2016",
-      projectDetail : Handlebars.templates.askDocs()
+      projectDetail : Handlebars.templates.askDocs(),
+      isCaseStudy   : true
     },
     {
       title         : "Budget App",
@@ -47,7 +50,8 @@
       thumbnail     : "/static/img/thumbnails/budget.png",
       projectType   : "Conceptual mobile app design",
       year          : "2016",
-      projectDetail : Handlebars.templates.budget()
+      projectDetail : Handlebars.templates.budget(),
+      isCaseStudy   : false
     },
     {
       title         : "Rethinking CaltrainMe",
@@ -55,7 +59,8 @@
       mainImage     : "/static/img/projects/caltrainme/caltrainme_main.jpg",
       projectType   : "Conceptual mobile app redesign",
       year          : "2015",
-      projectDetail : Handlebars.templates.caltrainMe()
+      projectDetail : Handlebars.templates.caltrainMe(),
+      isCaseStudy   : false
     },
     {
       title         : "Chrome Download Redesign",
@@ -63,14 +68,16 @@
       mainImage     : "/static/img/projects/chromedl/chrome.gif",
       projectType   : "Conceptual web app study",
       year          : "2015",
-      projectDetail : Handlebars.templates.chromedownload()
+      projectDetail : Handlebars.templates.chromedownload(),
+      isCaseStudy   : false
     },
     {
       title         : "Japan Trip Icon Alphabet Book",
       thumbnail     : "/static/img/thumbnails/abc.png",
       projectType   : "Icons",
       year          : "2015",
-      projectDetail : Handlebars.templates.japanIcons()
+      projectDetail : Handlebars.templates.japanIcons(),
+      isCaseStudy   : false
     }
   ];
 
@@ -79,6 +86,7 @@
   };
 
   // Cache commonly used jquery objects
+  var $caseStudyList   = $(".case-studies");
   var $projectList   = $(".project-list");
   var $projectDetail = $(".project-detail");
   var $projectDetailSection = $(".project-detail-section");
@@ -86,7 +94,8 @@
   // siema
   // var siema;
 
-  // Set and store project items
+  // Set and store case studies and project items
+  var caseStudies = [];
   var projectItems = [];
   for (var i = 0; i < projects.length; i++) {
     var project = projects[i];
@@ -100,7 +109,15 @@
     context.id = i;
     context.slug = slugify(project.title);
 
-    projectItems.push(Handlebars.templates.projectItem(context));
+    if (project.isCaseStudy) {
+      caseStudies.push(Handlebars.templates.caseStudy(context));
+    } else {
+      projectItems.push(Handlebars.templates.projectItem(context));
+    }
+  }
+
+  for (var i = 0; i < caseStudies.length; i++) {
+    $caseStudyList.append(caseStudies[i]);
   }
 
   // add items to list, serially fade them in
@@ -128,8 +145,9 @@
     event.stopPropagation();
   });
 
+  $caseStudyList.on("click", ".case-study-thumbnail", handleDetailViewClick);
+  $caseStudyList.on("click", ".case-study-title", handleDetailViewClick);
   $projectList.on("click", ".project-thumbnail", handleDetailViewClick);
-  $projectList.on("click", ".project-item-heading", handleDetailViewClick);
   $projectList.on("click", ".project-item-title", handleDetailViewClick);
 
   var siemas = [];
