@@ -230,6 +230,23 @@
     }
   }
 
+  function bindFinalDesignScroll() {
+    var linkElements = document.getElementsByClassName("tldr-final-design");
+    var anchorElements = document.getElementsByClassName("final-design");
+    if (linkElements.length === 1 && anchorElements.length === 1) {
+      var link = linkElements[0];
+      var anchor = anchorElements[0];
+
+      link.addEventListener("click", function() {
+        window.scroll({
+          top: anchor.offsetTop,
+          left: 0,
+          behavior: "smooth"
+        });
+      });
+    }
+  }
+
   // views
   var landingView = function() {
     $projectDetailSection.hide();
@@ -251,6 +268,7 @@
     $projectList.show();
 
     createSlideshows();
+    bindFinalDesignScroll();
 
     document.title = project.title;
   };

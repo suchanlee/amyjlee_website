@@ -563,6 +563,12 @@ nav.nav-list a:focus::after {
     opacity: 1;
 }
 
+.tldr-final-design {
+    color: #42a5f5;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
 .about {
     text-align: center;
     margin: 25px 0;
