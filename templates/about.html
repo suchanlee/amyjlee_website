@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="/static/css/normalize.css">
@@ -22,13 +23,12 @@
     </nav>
 
     <section>
-      <div class="auth">
-        <p>Please enter password to view projects :)</p>
-        <form action="/auth" method="post">
-          <input type="password" name="password" autofocus>
-          <input type="submit" value="Submit">
-        </form>
-        {% if error %}<p class="auth-error">{{ error }}</p>{% endif %}
+      <div class="about">
+        <!-- <img src="/static/img/about/about_image.png" alt="about page image"> -->
+        <h1>Hi, there!</h1>
+        <p>I'm Amy and I like designing beautiful things.</p>
+        <p>Timeless products, heartwarming illustrations, and ingenious icons inspire me.</p>
+        <p>I'm currently looking for new opportunities! <br>You can reach me via <a href="mailto:amyjlee43@gmail.com">email</a> <br>[ amyjlee43 at gmail.com ]</p>
       </div>
     </section>
 

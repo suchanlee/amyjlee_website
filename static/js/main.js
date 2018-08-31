@@ -20,11 +20,12 @@
   // List of projects
   var projects = [
     {
-      title         : "Care Plans - Management",
-      thumbnail     : "/static/img/thumbnails/mgmt.png",
+      title         : "Ask Docs",
+      thumbnail     : "/static/img/thumbnails/askdocs.png",
+      mainImage     : "/static/img/projects/askdocs/shell.png",
       projectType   : "End-to-end product design",
-      year          : "2017",
-      projectDetail : Handlebars.templates.management(),
+      year          : "2016",
+      projectDetail : Handlebars.templates.askDocs(),
       isCaseStudy   : true
     },
     {
@@ -36,12 +37,12 @@
       isCaseStudy   : true
     },
     {
-      title         : "Ask Docs",
-      thumbnail     : "/static/img/thumbnails/askdocs.png",
-      mainImage     : "/static/img/projects/askdocs/shell.png",
+      title         : "Care Plans - Management",
+      subtitle      : "",
+      thumbnail     : "/static/img/thumbnails/mgmt.png",
       projectType   : "End-to-end product design",
-      year          : "2016",
-      projectDetail : Handlebars.templates.askDocs(),
+      year          : "2017",
+      projectDetail : Handlebars.templates.management(),
       isCaseStudy   : true
     },
     {
@@ -71,14 +72,6 @@
       projectDetail : Handlebars.templates.chromedownload(),
       isCaseStudy   : false
     },
-    {
-      title         : "Japan Trip Icon Alphabet Book",
-      thumbnail     : "/static/img/thumbnails/abc.png",
-      projectType   : "Icons",
-      year          : "2015",
-      projectDetail : Handlebars.templates.japanIcons(),
-      isCaseStudy   : false
-    }
   ];
 
   var getPath = function(id) {

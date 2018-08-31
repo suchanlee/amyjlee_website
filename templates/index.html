@@ -1,11 +1,10 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="">
   <head>
     <title>Amy J Lee</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
     <link rel="stylesheet" href="/static/css/normalize.css">
@@ -13,28 +12,50 @@
     <link rel="apple-touch-icon-precomposed" href="/static/img/favicon.ico">
     <link rel="shortcut icon" href="/static/img/favicon.ico">
     <script src="/static/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="/static/js/vendor/handlebars.runtime.min.js"></script>
   </head>
   <body>
     <nav class="nav-list">
       <div class="logo"><a href="/">AMY J LEE</a></div>
       <div class="items">
-        <a data-hover="PROJECTS" href="/projects">PROJECTS</a>
         <a data-hover="ABOUT" href="/about">SAY 👋</a>
       </div>
     </nav>
 
+    <section class="project-detail-section">
+      <div class="project-detail"></div>
+      <div class="project-detail-divider"></div>
+    </section>
+
+    <section class="case-studies-section">
+      <div class="projects-section-heading">CASE STUDIES</div>
+      <div class="case-studies"></div>
+    </section>
+
     <section>
-      <div class="about">
-        <!-- <img src="/static/img/about/about_image.png" alt="about page image"> -->
-        <h1>Hi, there!</h1>
-        <p>I'm Amy and I like designing beautiful things.</p>
-        <p>Timeless products, heartwarming illustrations, and ingenious icons inspire me.</p>
-        <p>I'm currently looking for new opportunities! <br>You can reach me via <a href="mailto:amyjlee43@gmail.com">email</a> <br>[ amyjlee43 at gmail.com ]</p>
-      </div>
+      <div class="projects-section-heading">OLDIES BUT GOODIES ✌️</div>
+      <ul class="project-list"></ul>
+      <div class="clear-float"></div>
     </section>
 
     <footer>
       <p>&copy; 2018 Amy J Lee</p>
     </footer>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Director/1.2.8/director.min.js"></script>
+    <script src="/static/js/vendor/siema.min.js"></script>
+    <script src="/static/js/templates/caseStudy.handlebars.js"></script>
+    <script src="/static/js/templates/projectItem.handlebars.js"></script>
+    <script src="/static/js/templates/projectDetail.handlebars.js"></script>
+    <script src="/static/js/templates/projects/askDocs.handlebars.js"></script>
+    <script src="/static/js/templates/projects/authoring.handlebars.js"></script>
+    <script src="/static/js/templates/projects/caltrainMe.handlebars.js"></script>
+    <script src="/static/js/templates/projects/chromedownload.handlebars.js"></script>
+    <script src="/static/js/templates/projects/japanIcons.handlebars.js"></script>
+    <script src="/static/js/templates/projects/budget.handlebars.js"></script>
+    <script src="/static/js/templates/projects/management.handlebars.js"></script>
+    <script src="/static/js/plugins.js"></script>
+    <script src="/static/js/main.js"></script>
   </body>
 </html>
