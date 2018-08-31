@@ -630,7 +630,7 @@ footer {
 
     .case-study-thumbnail {
         width: 100%;
-        margin-top: 20px;
+        margin-bottom: 20px;
     }
 }
 
@@ -648,7 +648,7 @@ footer {
 
 @media only screen and (min-width: 381px) and (max-width: 680px) {
     body {
-        padding: 0px 0px;
+        padding: 0px 10px;
     }
 
     .project-list {
