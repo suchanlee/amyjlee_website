@@ -4,6 +4,8 @@ from session_cache import SessionCache
 
 SESSION_ID = 'SESSION_ID'
 PASSWORD_ENV_VAR = 'AMYJLEE_PASSWORD'
+AUTH_REDIRECT_PROJECT_ID = 'AUTH_REDIRECT_PROJECT_ID'
+AUTH_REDIRECT_PROJECT_SLUG = 'AUTH_REDIRECT_PROJECT_SLUG'
 
 PASSWORD = environ[PASSWORD_ENV_VAR]
 
@@ -21,10 +23,12 @@ def projects():
         return redirect('/auth')
     return render_template('index.html')
 
-@app.route('/projects/<int:project_id>/<project_slug>')
+@app.route('/projects/<project_id>/<project_slug>')
 def project_detail(project_id, project_slug):
     session_id = session.get(SESSION_ID)
     if session_id is None or not session_cache.has(session_id):
+        session[AUTH_REDIRECT_PROJECT_ID] = project_id
+        session[AUTH_REDIRECT_PROJECT_SLUG] = project_slug
         return redirect('/auth')
     return render_template('index.html')
 
@@ -39,7 +43,15 @@ def auth():
         else:
             session_id = session_cache.add()
             session[SESSION_ID] = session_id
-            return redirect('/projects')
+            project_id = session.get(AUTH_REDIRECT_PROJECT_ID)
+            project_slug = session.get(AUTH_REDIRECT_PROJECT_SLUG)
+
+            if project_id is None or project_slug is None:
+                return redirect('/projects')
+            else:
+                session[AUTH_REDIRECT_PROJECT_ID] = None
+                session[AUTH_REDIRECT_PROJECT_SLUG] = None
+                return redirect('/projects/{0}/{1}'.format(project_id, project_slug))
 
     return render_template('auth.html', error=error)
 
