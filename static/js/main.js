@@ -138,10 +138,10 @@
     event.stopPropagation();
   });
 
-  $caseStudyList.on("click", ".case-study-thumbnail", handleDetailViewClick);
-  $caseStudyList.on("click", ".case-study-title", handleDetailViewClick);
-  $projectList.on("click", ".project-thumbnail", handleDetailViewClick);
-  $projectList.on("click", ".project-item-title", handleDetailViewClick);
+  // $caseStudyList.on("click", ".case-study-thumbnail", handleDetailViewClick);
+  // $caseStudyList.on("click", ".case-study-title", handleDetailViewClick);
+  // $projectList.on("click", ".project-thumbnail", handleDetailViewClick);
+  // $projectList.on("click", ".project-item-title", handleDetailViewClick);
 
   var siemas = [];
 
