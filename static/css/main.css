@@ -11,7 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
+    color: #343A40;
     font-size: 1em;
     line-height: 1.4;
     height: 100%;
@@ -43,7 +43,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid #ccc;
+    border-top: 1px solid #343A40;
     margin: 1em 0;
     padding: 0;
 }
@@ -88,7 +88,7 @@ textarea {
 .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
-    color: #000;
+    color: #343A40;
     padding: 0.2em 0;
 }
 
@@ -160,7 +160,7 @@ nav.nav-list a {
     position: relative;
     display: inline-block;
     outline: none;
-    color: #100;
+    color: #343A40;
     text-decoration: none;
     letter-spacing: 1px;
     padding: 0px 0px 6px 0;
@@ -173,7 +173,7 @@ nav.nav-list a::after {
     width: 100%;
     height: 3px;
     /*background: rgba(85, 85, 85,0.1);*/
-    background-color: #100;
+    background-color: #343A40;
     content: '';
     opacity: 0;
     -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
@@ -192,29 +192,9 @@ nav.nav-list a:focus::after {
     transform: translateY(0px);
 }
 
-.overlay-wrap {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width:100%
-
-}
-
-.overlay {
-    display: inline-block;
-    width: 200px;
-    background-color: #AB8FF9;
-    color: white;
-    margin-top: 20%;
-    padding: 15px 35px;
-    font-size: 16px;
-    box-shadow: 1px 1px 2px #474747;
-    text-align: center;
-    letter-spacing: 1.2px;
-}
 
 .projects-heading {
-    color: #323232;
+    color: #343A40;
     text-decoration: none;
     letter-spacing: 1px;
     font-size: 13px;
@@ -253,7 +233,7 @@ nav.nav-list a:focus::after {
 }
 
 .project-item a {
-    color: #100;
+    color: #343A40;
     text-decoration: none;
 }
 
@@ -268,7 +248,7 @@ nav.nav-list a:focus::after {
     font-weight: 700;
     font-size: 16px;
     padding-bottom: 5px;
-    border-bottom: 3px solid #100;
+    border-bottom: 3px solid #343A40;
 }
 
 .case-studies-section {
@@ -303,7 +283,7 @@ nav.nav-list a:focus::after {
     font-size: 24px;
     font-weight: 700;
     text-decoration: none;
-    color: #100;
+    color: #343A40;
 }
 
 .case-study-title:hover {
@@ -336,13 +316,13 @@ nav.nav-list a:focus::after {
     max-width: 900px;
     width: 100%;
     margin: 0 auto 50px;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #343A40;
 }
 
 .project-detail h2 {
-    font-size: 20px;
+    font-size: 32px;
     margin-top: 40px;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 .project-detail iframe {
@@ -409,10 +389,6 @@ nav.nav-list a:focus::after {
     margin-right: 8px;
 }
 
-.japan-trip-icons-text {
-    text-align: center;
-}
-
 .project-details {
     width: 100%;
 }
@@ -431,25 +407,37 @@ nav.nav-list a:focus::after {
 }
 
 .project-details > h3 {
-    font-size: 16px;
-    text-transform: uppercase;
+    font-size: 20px;
     font-weight: 600;
 }
 
-.project-details > br {
+.project-details > h4 {
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.project-details ul {
+    margin-top: 5px;
+}
+
+.project-details b {
+    font-weight: 600;
+}
+
+.project-details br {
     line-height: 25px;
 }
 
 .project-details img {
     width: 100%;
     max-width: 1400px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .project-details figcaption {
     text-align: center;
     font-size: 14px;
-    margin-bottom: 20px;
+    color: #737B84;
 }
 
 .project-details figcaption::before {
@@ -469,6 +457,10 @@ nav.nav-list a:focus::after {
 
 .project-details ol {
     padding-left: 65px;
+}
+
+.project-details .image-container {
+    margin: 60px 0;
 }
 
 .project-main-image {
@@ -534,7 +526,7 @@ nav.nav-list a:focus::after {
 }
 
 .slideshow-container {
-    margin: 30px 0;
+    margin: 60px 0;
 }
 
 .slideshow-container .thumbnail-container {
@@ -605,7 +597,7 @@ nav.nav-list a:focus::after {
     padding: 2px;
     outline: none;
     border: none;
-    border-bottom: 2px solid #323232;
+    border-bottom: 2px solid #343A40;
     border-radius: 0px;
 }
 
@@ -641,15 +633,9 @@ footer {
 }
 
 @media only screen and (max-width: 780px) and (min-width: 451px) {
-    .overlay-wrap{
-        width: 100%
-    }
 }
 
 @media only screen and (max-width: 450px) {
-    .overlay-wrap{
-        width: 100%
-    }
 }
 
 @media only screen and (min-width: 381px) and (max-width: 680px) {
