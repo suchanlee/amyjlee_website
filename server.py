@@ -21,7 +21,7 @@ def projects():
     session_id = session.get(SESSION_ID)
     if session_id is None or not session_cache.has(session_id):
         return redirect('/auth')
-    return render_template('index.html')
+    return render_template('projects.html')
 
 @app.route('/projects/<project_id>/<project_slug>')
 def project_detail(project_id, project_slug):
@@ -30,7 +30,7 @@ def project_detail(project_id, project_slug):
         session[AUTH_REDIRECT_PROJECT_ID] = project_id
         session[AUTH_REDIRECT_PROJECT_SLUG] = project_slug
         return redirect('/auth')
-    return render_template('index.html')
+    return render_template('projects.html')
 
 @app.route('/auth', methods=['GET', 'POST'])
 def auth():
@@ -57,7 +57,7 @@ def auth():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('index.html')
 
 if __name__ == '__main__':
     print 'Server running'
