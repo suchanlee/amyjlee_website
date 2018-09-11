@@ -32,7 +32,7 @@
       title         : "Care Plans - Authoring",
       thumbnail     : "/static/img/thumbnails/authoring.png",
       projectType   : "End-to-end product design",
-      year          : "2017",
+      year          : "2017-2018",
       projectDetail : Handlebars.templates.authoring(),
       isCaseStudy   : true
     },
@@ -41,7 +41,7 @@
       subtitle      : "",
       thumbnail     : "/static/img/thumbnails/mgmt.png",
       projectType   : "End-to-end product design",
-      year          : "2017",
+      year          : "2017-2018",
       projectDetail : Handlebars.templates.management(),
       isCaseStudy   : true
     },
