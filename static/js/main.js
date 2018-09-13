@@ -65,7 +65,8 @@
       projectType   : "Conceptual mobile app redesign",
       year          : "2015",
       projectDetail : Handlebars.templates.caltrainMe(),
-      isCaseStudy   : false
+      isCaseStudy   : false,
+      isMainImageSmall: true
     },
     {
       title         : "Chrome Download Redesign",

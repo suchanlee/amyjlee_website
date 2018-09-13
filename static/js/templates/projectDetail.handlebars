@@ -1,6 +1,10 @@
 <div class="{{slug}}">
   {{#if mainImage}}
-    <img src="{{mainImage}}" alt="{{title}} main image" class="project-main-image">
+    <img
+      src="{{mainImage}}"
+      alt="{{title}} main image"
+      class="project-main-image {{#if isMainImageSmall}}-small{{/if}}"
+    >
   {{/if}}
   <div class="project-detail-header">
     <h1 class="project-heading">{{title}}</h1>
