@@ -1,36 +1,10 @@
-<h2>TL;DR</h2>
-
-<h4>Goal</h4>
-<p>To design a tool to manage and monitor patient's progress using the Care Plans tool created in the <a href="/projects/1/care-plans-authoring">Authoring tool</a>.</p>
-
-<h4>What is a Care Plan?</h4>
-<ul>
-  <li>A Care Plan is a guide design by a medical provider to help a patient manage his or her condition</li>
-  <li>Provides preventative measures, such as medication, measurement, and/or appointment reminders</li>
-  <li>Can also provide reactive measures, such as an alerting system for an emergency</li>
-</ul>
-
-<h4>Target Users</h4>
-<ul>
-  <li>Case managers, who review patient activity in Care Plans and triage patient activities</li>
-  <li>Case management directors, who manage the case managers and alert doctors and/or patients based on activities in Care Plans</li>
-</ul>
-
-<h4>Steps</h4>
-<ul>
-  <li>Review and iterate provided requirements for the project</li>
-  <li>Identify and interview target users for their use cases</li>
-  <li>Repeated cycles of iteration, data collection, and review</li>
-  <li>Soft launch to case managers to collect more feedback</li>
-</ul>
-
-<h4 class="tldr-final-design">Final Design 🔥</h4>
-
 <h2>Goal</h2>
 
 <p>The <a href="/projects/1/care-plans-authoring">Authoring tool</a> helps doctors create Care Plans, which help doctors keep track of patients' health outside of the hospital and allow patients to receive more holistic health care. But how can we actually keep track of their health?</p>
 
 <p>My goal in this project was to design software for an insurance company based in South Africa to monitor patients and triage activities of patients (e.g. escalating to doctors if activities in Care Plans indicated something alarming) enrolled in Care Plans.</p>
+
+<div class="project-detail-divider"></div>
 
 <h2>Target Users</h2>
 
@@ -47,6 +21,8 @@
   <img src="/static/img/projects/mgmt/persona-2.png">
   <figcaption>Examples of personas based on research and user interviews</figcaption>
 </div>
+
+<div class="project-detail-divider"></div>
 
 <h2>Steps</h2>
 
@@ -79,17 +55,23 @@
 
 <p>Based on a series of interviews with case managers, I created new iterations that reflected and supported their workflow.</p>
 
-<img src="/static/img/projects/mgmt/iteration-2-a.png" alt="Task management iteration in table style">
-<figcaption>Table style iteration</figcaption>
+<div class="image-container">
+  <img src="/static/img/projects/mgmt/iteration-2-a.png" alt="Task management iteration in table style">
+  <figcaption>Table style iteration</figcaption>
+</div>
 
 <p>For the scheduled beta launch of this project, we decided to hold off on most of the dashboard features and focus mostly on the alerting and triaging workflows. At the time, our team was using Trello to keep track of tasks with our partner. They really enjoyed using Trello because physically moving each card was delightful and the visual queues were clear. So I tried exploring the swim lane workflow.</p>
 
-<img src="/static/img/projects/mgmt/iteration-2-b.png" alt="Task management iteration in kanban style">
-<figcaption>Kanban style iteration</figcaption>
+<div class="image-container">
+  <img src="/static/img/projects/mgmt/iteration-2-b.png" alt="Task management iteration in kanban style">
+  <figcaption>Kanban style iteration</figcaption>
+</div>
 
 <p>The swim lane workflow received positive feedback internally and from our partner. <b>However, due to development timeline, we decided to keep it in table format until the next release.</b></p>
 
-<h2 class="final-design">Final Design 🔥</h2>
+<div class="project-detail-divider"></div>
+
+<h2 class="final-design">Final Design</h2>
 
 <p>Based on the user type, main workflows are different.</p>
 
@@ -104,9 +86,11 @@
   </ul>
 </ul>
 
-<img src="/static/img/projects/mgmt/FINAL1-a.png">
-<img src="/static/img/projects/mgmt/FINAL1-b.png">
-<img src="/static/img/projects/mgmt/FINAL1-c.png">
+<div class="image-container">
+  <img src="/static/img/projects/mgmt/FINAL1-a.png">
+  <img src="/static/img/projects/mgmt/FINAL1-b.png">
+  <img src="/static/img/projects/mgmt/FINAL1-c.png">
+</div>
 
 <h4>Case management directors</h4>
 <ul>
@@ -127,6 +111,8 @@
 </div>
 
 <p>When the beta release's development neared its end, I tested it against a set of use cases we collected from interactions with our users. It listed all the tasks users would go through. We made sure that the engineers covered all the edge and error cases.</p>
+
+<div class="project-detail-divider"></div>
 
 <h2>Retrospective</h2>
 

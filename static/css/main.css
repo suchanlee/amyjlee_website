@@ -301,8 +301,8 @@ nav.nav-list a:not(.-active):focus::after {
 
 .case-study-subtitle {
     margin-top: 5px;
-    font-size: 13px;
-    color: #9DA6AF;
+    font-size: 14px;
+    color: #8b929a;
 }
 
 .project-detail-section {
@@ -314,10 +314,10 @@ nav.nav-list a:not(.-active):focus::after {
 }
 
 .project-detail-divider {
-    max-width: 900px;
+    max-width: 600px;
     width: 100%;
-    margin: 0 auto 50px;
-    border-bottom: 1px solid #343A40;
+    margin: 60px auto;
+    border-bottom: 1px solid #D6DBE0;
 }
 
 .project-detail h2 {
@@ -369,7 +369,8 @@ nav.nav-list a:not(.-active):focus::after {
 
 .project-metadata {
     margin-top: 10px;
-    font-size: 13px;
+    font-size: 14px;
+    color: #8b929a;
 }
 
 .project-metadata-type {
@@ -432,10 +433,10 @@ nav.nav-list a:not(.-active):focus::after {
 .project-details img {
     width: 100%;
     max-width: 1400px;
-    margin-bottom: 20px;
 }
 
 .project-details figcaption {
+    margin-top: 20px;
     text-align: center;
     font-size: 14px;
     color: #737B84;
@@ -530,6 +531,7 @@ nav.nav-list a:not(.-active):focus::after {
 }
 
 .slideshow-container .thumbnail-container {
+    margin-top: 30px;
     text-align: center;
 }
 
