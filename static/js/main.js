@@ -21,6 +21,7 @@
   var projects = [
     {
       title         : "Ask Docs",
+      description   : "Mobile app for virtual doctor visit",
       thumbnail     : "/static/img/thumbnails/askdocs.png",
       mainImage     : "/static/img/projects/askdocs/shell.png",
       projectType   : "End-to-end product design",
@@ -30,6 +31,7 @@
     },
     {
       title         : "Care Plans - Authoring",
+      description   : "Care Plans builder for medical providers",
       thumbnail     : "/static/img/thumbnails/authoring.png",
       projectType   : "End-to-end product design",
       year          : "2017-2018",
@@ -38,7 +40,7 @@
     },
     {
       title         : "Care Plans - Management",
-      subtitle      : "",
+      description   : "Task management tool for patient care",
       thumbnail     : "/static/img/thumbnails/mgmt.png",
       projectType   : "End-to-end product design",
       year          : "2017-2018",

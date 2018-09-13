@@ -247,20 +247,17 @@ nav.nav-list a:not(.-active):focus::after {
     max-width: 900px;
     width: 100%;
     margin: 15px auto 0px;
-    font-weight: 700;
-    font-size: 16px;
+    font-weight: 600;
+    font-size: 20px;
     padding-bottom: 5px;
-    border-bottom: 3px solid #343A40;
 }
 
 .case-studies-section {
-    margin: 30px 0;
+    margin: 50px 0;
 }
 
 .case-study-item {
     margin-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 .case-study-item-vertical {
@@ -268,14 +265,24 @@ nav.nav-list a:not(.-active):focus::after {
 }
 
 .case-study-item-horizontal > .case-study-item-left {
-    width: 45%;
+    width: 66%;
     display: inline-block;
-    vertical-align: top;
-    padding-right: 15px;
-    float: left;
 }
 
-.case-study-item-horizontal > .case-study-item-left h3,
+.case-study-item-horizontal > .case-study-item-left img {
+    width: 100%;
+}
+
+.case-study-item-horizontal > .case-study-item-right {
+    width: calc(34% - 20px);
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 20px;
+    float: right;
+}
+
+.case-study-item-horizontal > .case-study-item-right h3,
 .case-study-item-vertical > h3 {
     margin-top: 0;
     margin-bottom: 5px;
@@ -293,17 +300,9 @@ nav.nav-list a:not(.-active):focus::after {
 }
 
 .case-study-subtitle {
+    margin-top: 5px;
     font-size: 13px;
-    color: #343A40;
-}
-
-.case-study-item-horizontal > .case-study-item-right {
-    width: calc(55% - 15px);
-    display: inline-block;
-}
-
-.case-study-item-horizontal > .case-study-item-right img {
-    width: 100%;
+    color: #9DA6AF;
 }
 
 .project-detail-section {
