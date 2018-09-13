@@ -23,12 +23,16 @@
 
     <section>
       <div class="auth">
-        <p>Please enter password to view projects :)</p>
+        {% if error %}
+          <h2 class="auth-error">Invalid Password</h2>
+        {% else %}
+          <h2>Enter Password</h2>
+        {% endif %}
         <form action="/auth" method="post">
-          <input type="password" name="password" autofocus>
-          <input type="submit" value="Submit">
+          <input class="auth-password" type="password" name="password" placeholder="Open sesame!" autofocus>
+          <input class="auth-submit" type="submit" value="GO">
         </form>
-        {% if error %}<p class="auth-error">{{ error }}</p>{% endif %}
+        <p class="auth-contact-me"><a href="mailto:me.lee403@gmail.com">Contact me</a> for password :)</p>
       </div>
     </section>
 

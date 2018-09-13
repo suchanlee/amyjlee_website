@@ -149,7 +149,7 @@ nav.nav-list {
     justify-content: space-between;
     max-width: 900px;
     width: 100%;
-    padding: 22px 0;
+    padding: 30px 0 22px;
     margin: 0 auto;
     font-weight: 600;
     font-size: 13px;
@@ -562,22 +562,22 @@ nav.nav-list a:focus::after {
 }
 
 .about {
-    text-align: center;
-    margin: 25px 0;
+    max-width: 900px;
+    margin: 25px auto;
+}
+
+.about h1, .about p {
+    max-width: 450px;
+    width: 100%;
 }
 
 .about h1 {
     font-size: 30px;
 }
 
-.about img {
-    width: 100%;
-    max-width: 400px;
-}
-
 .about p {
-    margin: 5px auto;
-    max-width: 350px;
+    font-size: 16px;
+    line-height: 1.5;
 }
 
 .auth {
@@ -587,18 +587,42 @@ nav.nav-list a:focus::after {
 }
 
 .auth > .auth-error {
-    position: absolute;
-    bottom: -45px;
-    width: 100%;
     color: red;
 }
 
-.auth > form > input[type="password"] {
-    padding: 2px;
+.auth .auth-password {
+    padding: 2px 2px 5px 2px;
     outline: none;
     border: none;
-    border-bottom: 2px solid #343A40;
+    border-bottom: 3px solid #343A40;
     border-radius: 0px;
+}
+
+.auth h2 {
+    margin-bottom: 30px;
+}
+
+.auth .auth-password::placeholder {
+    font-size: 12px;
+    color: #737B84;
+}
+
+.auth .auth-submit {
+    padding: 6px 15px;
+    margin-left: 3px;
+    border: none;
+    background: none;
+    background-color: #343A40;
+    color: white;
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.auth .auth-contact-me {
+    margin-top: 24px;
+    font-size: 12px;
 }
 
 footer {
