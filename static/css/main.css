@@ -310,7 +310,14 @@ nav.nav-list a:not(.-active):focus::after {
 }
 
 .project-detail {
-    margin: 40px auto 50px;
+    margin: 40px auto 64px;
+}
+
+.project-detail-section-divider {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    border-bottom: 1px solid #D6DBE0;
 }
 
 .project-detail-divider {
