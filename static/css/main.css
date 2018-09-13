@@ -467,7 +467,6 @@ nav.nav-list a:not(.-active):focus::after {
 .project-main-image {
     display: block;
     width: 100%;
-    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
 }
