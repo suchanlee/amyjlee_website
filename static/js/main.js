@@ -75,7 +75,8 @@
       projectType   : "Conceptual web app study",
       year          : "2015",
       projectDetail : Handlebars.templates.chromedownload(),
-      isCaseStudy   : false
+      isCaseStudy   : false,
+      isMainImageSmall: true
     },
   ];
 

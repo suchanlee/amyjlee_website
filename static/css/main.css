@@ -647,6 +647,17 @@ footer {
     margin-top: 50px;
 }
 
+.chromedl-triple-images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.project-details img.chromedl-recent {
+    width: initial;
+}
+
 .clear-float {
     clear: both;
 }
