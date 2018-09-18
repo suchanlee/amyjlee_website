@@ -22,8 +22,8 @@
     {
       title         : "Ask Docs",
       description   : "Mobile app for virtual doctor visit",
-      thumbnail     : "/static/img/thumbnails/askdocs.png",
-      mainImage     : "/static/img/projects/askdocs/shell.png",
+      thumbnail     : "/static/img/thumbnails/askdocs.jpg",
+      mainImage     : "/static/img/projects/askdocs/shell.jpg",
       projectType   : "End-to-end product design",
       year          : "2016",
       projectDetail : Handlebars.templates.askDocs(),
@@ -32,8 +32,8 @@
     {
       title         : "Care Plans - Authoring",
       description   : "Care Plans builder for medical providers",
-      thumbnail     : "/static/img/thumbnails/authoring.png",
-      mainImage     : "/static/img/projects/authoring/authoring-main.png",
+      thumbnail     : "/static/img/thumbnails/authoring.jpg",
+      mainImage     : "/static/img/projects/authoring/authoring-main.jpg",
       projectType   : "End-to-end product design",
       year          : "2017-2018",
       projectDetail : Handlebars.templates.authoring(),
@@ -42,8 +42,8 @@
     {
       title         : "Care Plans - Management",
       description   : "Task management tool for patient care",
-      thumbnail     : "/static/img/thumbnails/mgmt.png",
-      mainImage     : "/static/img/projects/mgmt/mgmt-main.png",
+      thumbnail     : "/static/img/thumbnails/mgmt.jpg",
+      mainImage     : "/static/img/projects/mgmt/mgmt-main.jpg",
       projectType   : "End-to-end product design",
       year          : "2017-2018",
       projectDetail : Handlebars.templates.management(),
